@@ -1,0 +1,812 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?><?xml-stylesheet type="text/xsl" href="OpenCDEViewer.xsl"?>
+
+<!--
+  Title: US_Realm_Header_Template -->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3"
+	xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc" xsi:schemaLocation="urn:hl7-org:v3 ../CDA.xsd">
+	<!--
+********************************************************
+  CDA Header
+********************************************************
+  -->
+	<realmCode code="US"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- US General Header Template -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.1"/>
+	<!-- *** Note:  The next templateId, code and title will differ depending on what type of document is being sent. *** -->
+	<!-- conforms to the document specific requirements  -->
+	<templateId root="2.16.840.1.113883.10.20.22.1.4"/>
+	<id extension="TT988" root="2.16.840.1.113883.19.5.99999.1"/>
+	<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11488-4"
+		displayName="Consultation Note"/>
+	<title>Community Health and Hospitals: Consultation Note</title>
+	<effectiveTime value="22220101000000+0100"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-US"/>
+	<setId extension="sTT988" root="2.16.840.1.113883.19.5.99999.19"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="ParamPatientIdExt" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>ParamPatientStreet</streetAddressLine>
+				<city>ParamPatientCity</city>
+				<state>ParamPatientState</state>
+				<postalCode>ParamPatientIPostalCode</postalCode>
+				<country>ParamPatientCountry</country>
+			</addr>
+			<telecom value="tel:ParamPatientTel" use="HP"/>
+			<patient>
+				<name>
+					<given>ParamPatientGiven</given>
+					<family>ParamPatientFamily</family>
+				</name>
+				<administrativeGenderCode code="ParamPatientGender" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="22220101000000+0200"/>
+			</patient>
+			<providerOrganization>
+				<id root="ParamCustodianId"/>
+				<name>ParamCustodianname</name>
+				<telecom value="tel:ParamCustodianTel" use="WP"/>
+				<addr>
+					<streetAddressLine>ParamCustodianStreet</streetAddressLine>
+					<city>ParamCustodianCity</city>
+					<state>ParamCustodianState</state>
+					<postalCode>ParamCustodianPostalCode</postalCode>
+					<country>ParamCustodianCountry</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="22220101000000+0100"/>
+		<assignedAuthor>
+			<id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+			<code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+				displayName="ParamAuthorCodeName"/>
+			<assignedPerson>
+				<name>
+					<given>ParamAuthorGiven</given>
+					<family>ParamAuthorFamily</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<dataEnterer>
+		<assignedEntity>
+			<id root="2.16.840.1.113883.4.6" extension="999999943252"/>
+			<addr>
+				<streetAddressLine>1001 Village Avenue</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use="WP" value="tel:555-555-1002"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</dataEnterer>
+	<informant>
+		<assignedEntity>
+			<id extension="KP00017" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>1001 Village Avenue</streetAddressLine>
+				<city>Portland</city>
+				<state>OR</state>
+				<postalCode>99123</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom use="WP" value="tel:555-555-1002"/>
+			<assignedPerson>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</informant>
+	<informant>
+		<relatedEntity classCode="PRS">
+			<!-- classCode PRS represents a person with personal relationship with the patient. -->
+			<code code="SPS" displayName="SPOUSE" codeSystem="2.16.840.1.113883.1.11.19563"
+				codeSystemName="Personal Relationship Role Type Value Set"/>
+			<relatedPerson>
+				<name>
+					<given>Frank</given>
+					<family>Jones</family>
+				</name>
+			</relatedPerson>
+		</relatedEntity>
+	</informant>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="ParamCustodianId"/>
+				<name>ParamCustodianname</name>
+				<telecom value="tel:ParamCustodianTel" use="WP"/>
+				<addr>
+					<streetAddressLine>ParamCustodianStreet</streetAddressLine>
+					<city>ParamCustodianCity</city>
+					<state>ParamCustodianState</state>
+					<postalCode>ParamCustodianPostalCode</postalCode>
+					<country>ParamCustodianCountry</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<informationRecipient>
+		<intendedRecipient>
+			<informationRecipient>
+				<name>
+					<given>Henry</given>
+					<family>Seven</family>
+				</name>
+			</informationRecipient>
+			<receivedOrganization>
+				<name>Community Health and Hospitals</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<legalAuthenticator>
+		<time value="22220101000000+0100"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+			<code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+				displayName="ParamAuthorCodeName"/>
+			<assignedPerson>
+				<name>
+					<given>ParamAuthorGiven</given>
+					<family>ParamAuthorFamily</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authenticator>
+		<time value="22220101000000+0100"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+			<code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+				displayName="ParamAuthorCodeName"/>
+			<assignedPerson>
+				<name>
+					<given>ParamAuthorGiven</given>
+					<family>ParamAuthorFamily</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</authenticator>
+	<participant typeCode="IND">
+		<time xsi:type="IVL_TS">
+			<low value="19590101"/>
+			<high value="20111025"/>
+		</time>
+		<associatedEntity classCode="NOK">
+			<code code="MTH" codeSystem="2.16.840.1.113883.5.111"/>
+			<addr>
+				<streetAddressLine>17 Daws Rd.</streetAddressLine>
+				<city>Beaverton</city>
+				<state>OR</state>
+				<postalCode>97867</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:(999)555-1212" use="WP"/>
+			<associatedPerson>
+				<name>
+					<prefix>Mrs.</prefix>
+					<given>Martha</given>
+					<family>Jones</family>
+				</name>
+			</associatedPerson>
+		</associatedEntity>
+	</participant>
+	<inFulfillmentOf typeCode="FLFS">
+		<order classCode="ACT" moodCode="RQO">
+			<id root="2.16.840.1.113883.19" extension="ParamPatientIdExt-12345-67890"/>
+		</order>
+	</inFulfillmentOf>
+	<componentOf>
+		<encompassingEncounter>
+			<id extension="ParamPatientIdExt9937012" root="2.16.840.1.113883.19"/>
+			<code codeSystem="2.16.840.1.113883.6.12" codeSystemName="CPT-4" code="99213"
+				displayName="Evaluation and Management"/>
+			<effectiveTime>
+				<low value="20090227130000+0500"/>
+				<high value="20090227130000+0500"/>
+			</effectiveTime>
+			<location>
+				<healthCareFacility>
+					<id root="2.16.540.1.113883.19.2"/>
+				</healthCareFacility>
+			</location>
+		</encompassingEncounter>
+	</componentOf>
+	<!-- ********************************************************
+     CDA Body
+     ******************************************************** -->
+	<component>
+		<structuredBody>
+			<!-- Allergies, Adverse Reactions, Alerts -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.6"/>
+					<!-- Alerts section template -->
+					<code code="48765-2" codeSystem="2.16.840.1.113883.6.1"/>
+					<title>ALLERGIES, ADVERSE REACTIONS, ALERTS</title>
+					<text>
+						<renderMultiMedia referencedObject="ALLERGIES"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="ALLERGIES">
+							<value mediaType="text/html" representation="B64">
+								PGRpdj4NCgkJCQkJCQkJCTx0YWJsZSBib3JkZXI9IjEiIGNsYXNzPSJuYXJyX3RhYmxlIiB3aWR0
+								aD0iMTAwJSI+DQoJCQkJCQkJCQkJPHRoZWFkPg0KCQkJCQkJCQkJCQk8dHIgY2xhc3M9Im5hcnJf
+								dHIiPg0KCQkJCQkJCQkJCQkJPHRoIGNsYXNzPSJuYXJyX3RoIj5TdWJzdGFuY2U8L3RoPg0KCQkJ
+								CQkJCQkJCQkJPHRoIGNsYXNzPSJuYXJyX3RoIj5SZWFjdGlvbjwvdGg+DQoJCQkJCQkJCQkJCQk8
+								dGggY2xhc3M9Im5hcnJfdGgiPlNldmVyaXR5PC90aD4NCgkJCQkJCQkJCQkJCTx0aCBjbGFzcz0i
+								bmFycl90aCI+U3RhdHVzPC90aD4NCgkJCQkJCQkJCQkJPC90cj4NCgkJCQkJCQkJCQk8L3RoZWFk
+								Pg0KCQkJCQkJCQkJCTx0Ym9keT4NCgkJCQkJCQkJCQkJPHRyIGNsYXNzPSJuYXJyX3RyIj4NCgkJ
+								CQkJCQkJCQkJCTx0ZD5BTExFUkdFTklDIEVYVFJBQ1QsIFBFTklDSUxMSU48L3RkPg0KCQkJCQkJ
+								CQkJCQkJPHRkPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTmF1c2VhICAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPg0KCQkJCQkJCQkJ
+								CQkJPHRkPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTW9kZXJhdGUgdG8gc2V2ZXJl
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPg0K
+								CQkJCQkJCQkJCQkJPHRkPkluYWN0aXZlPC90ZD4NCgkJCQkJCQkJCQkJPC90cj4NCgkJCQkJCQkJ
+								CQkJPHRyIGNsYXNzPSJuYXJyX3RyIj4NCgkJCQkJCQkJCQkJCTx0ZD5Db2RlaW5lPC90ZD4NCgkJ
+								CQkJCQkJCQkJCTx0ZD4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIFdoZWV6aW5nICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPg0KCQkJ
+								CQkJCQkJCQkJPHRkPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTW9kZXJhdGUgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+DQoJCQkJ
+								CQkJCQkJCQk8dGQ+QWN0aXZlPC90ZD4NCgkJCQkJCQkJCQkJPC90cj4NCgkJCQkJCQkJCQkJPHRy
+								IGNsYXNzPSJuYXJyX3RyIj4NCgkJCQkJCQkJCQkJCTx0ZD5Bc3BpcmluPC90ZD4NCgkJCQkJCQkJ
+								CQkJCTx0ZD4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEhpdmVzICAgICAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPg0KCQkJCQkJCQkJCQkJ
+								PHRkPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgTWlsZCB0byBtb2RlcmF0ZSAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4NCgkJCQkJ
+								CQkJCQkJCTx0ZD5BY3RpdmU8L3RkPg0KCQkJCQkJCQkJCQk8L3RyPg0KCQkJCQkJCQkJCTwvdGJv
+								ZHk+DQoJCQkJCQkJCQk8L3RhYmxlPg0KCQkJCQkJCQk8L2Rpdj4=
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************************
+ASSESSMENT
+************************************ -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.8"/>
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="51848-0"
+						displayName="ASSESSMENT"/>
+					<title>ASSESSMENT</title>
+					<text>
+						<renderMultiMedia referencedObject="ASSESSMENT"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="ASSESSMENT">
+							<value mediaType="text/html" representation="B64">
+								PGRpdj4NCiAgICAgICAgICAgIDxvbD4NCiAgICAgICAgICAgICAgICA8bGk+UmVjdXJyZW50IEdJ
+								IGJsZWVkIG9mIHVua25vd24gZXRpb2xvZ3k7IGh5cG90ZW5zaW9uIHBlcmhhcHMNCiAgICAgICAg
+								ICAgICAgICAgICAgc2Vjb25kYXJ5IHRvIHRoaXMgYnV0IGFzIGxpa2VseSBzZWNvbmRhcnkgdG8g
+								cG9seXBoYXJtYWN5LiAgICAgICAgICAgICA8L2xpPg0KICAgICAgICAgICAgICAgIDxsaT5BY3V0
+								ZSBvbiBjaHJvbmljIGFuZW1pYSBzZWNvbmRhcnkgdG8gIzEuPC9saT4NCiAgICAgICAgICAgICAg
+								ICA8bGk+QXpvdGVtaWEsIGFjdXRlIHJlbmFsIGZhaWx1cmUgd2l0aCB2b2x1bWUgbG9zcyBzZWNv
+								bmRhcnkgdG8NCiAgICAgICAgICAgICAgICAgICAgIzEuICAgICAgICAgICAgIDwvbGk+DQogICAg
+								ICAgICAgICAgICAgPGxpPkh5cGVya2FsZW1pYSBzZWNvbmRhcnkgdG8gIzMgYW5kIG9uIEFDRSBh
+								bmQgSysgc3VwcGxlbWVudC48L2xpPg0KICAgICAgICAgICAgICAgIDxsaT5PdGhlciBjaHJvbmlj
+								IGRpYWdub3NlcyBhcyBub3RlZCBhYm92ZSwgY3VycmVudGx5IHN0YWJsZS48L2xpPg0KICAgICAg
+								ICAgICAgPC9vbD4NCiAgICAgICAgPC9kaXY+
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************************
+CHIEF COMPLAINT / REASON FOR VISIT
+************************************ -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.13"/>
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="46239-0"
+						displayName="REASON FOR VISIT + CHIEF COMPLAINT"/>
+					<title>REASON FOR VISIT/CHIEF COMPLAINT</title>
+					<text>
+						<renderMultiMedia referencedObject="REASON"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="REASON">
+							<value mediaType="text/html" representation="B64">
+								PGRpdj4NCiAgICAgICAgICAgIDxwPkRhcmsgc3Rvb2xzLjwvcD4NCiAgICAgICAgPC9kaXY+
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+FAMILY HISTORY
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.15"/>
+					<!--  ********  Family history section template   ******** -->
+					<code code="10157-6" codeSystem="2.16.840.1.113883.6.1"/>
+					<title>FAMILY HISTORY</title>
+					<text>
+						<renderMultiMedia referencedObject="FAMILYHISTORY"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="FAMILYHISTORY">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHA+RmF0aGVyIChkZWNlYXNlZCk8L3A+DQogICAg
+								ICAgICAgICA8dGFibGUgYm9yZGVyPSIxIiBjbGFzcz0ibmFycl90YWJsZSIgd2lkdGg9IjEwMCUi
+								Pg0KICAgICAgICAgICAgICAgIDx0aGVhZD4NCiAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNz
+								PSJuYXJyX3RyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0aCBjbGFzcz0ibmFycl90aCI+
+								RGlhZ25vc2lzPC90aD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0aCBjbGFzcz0ibmFycl90
+								aCI+QWdlIEF0IE9uc2V0PC90aD4NCiAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAg
+								ICAgICAgICA8L3RoZWFkPg0KICAgICAgICAgICAgICAgIDx0Ym9keT4NCiAgICAgICAgICAgICAg
+								ICAgICAgPHRyIGNsYXNzPSJuYXJyX3RyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD5N
+								eW9jYXJkaWFsIEluZmFyY3Rpb24gKGNhdXNlIG9mIGRlYXRoKTwvdGQ+DQogICAgICAgICAgICAg
+								ICAgICAgICAgICA8dGQ+NTc8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAg
+								ICAgICAgICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAgICAgICAgICAgICAgICAgICAg
+								ICAgPHRkPkRpYWJldGVzPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD40MDwvdGQ+
+								DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgPC90Ym9keT4NCiAg
+								ICAgICAgICAgIDwvdGFibGU+DQogICAgICAgIDwvZGl2Pg==
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************************
+GENERAL STATUS
+************************************ -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.2.5"/>
+					<code code="10210-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="GENERAL STATUS"/>
+					<title>GENERAL STATUS</title>
+					<text>
+						<renderMultiMedia referencedObject="GENERALSTATUS"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="GENERALSTATUS">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHA+QWxlcnQgYW5kIGluIGdvb2Qgc3Bpcml0cywg
+								bm8gYWN1dGUgZGlzdHJlc3MuIDwvcD4NCiAgICAgICAgPC9kaXY+
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************************
+HISTORY OF PAST ILLNESS
+************************************ -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.20"/>
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="11348-0"
+						displayName="HISTORY OF PAST ILLNESS"/>
+					<title>PAST MEDICAL HISTORY</title>
+					<text>
+						<renderMultiMedia referencedObject="PASTILLNESS"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="PASTILLNESS">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHA+U2VlIEhpc3Rvcnkgb2YgUHJlc2VudCBJbGxu
+								ZXNzLjwvcD4NCiAgICAgICAgPC9kaXY+
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+HISTORY OF PRESENT ILLNESS
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.4"/>
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="10164-2"
+						displayName="HISTORY OF PRESENT ILLNESS"/>
+					<title>HISTORY OF PRESENT ILLNESS</title>
+					<text>
+						<renderMultiMedia referencedObject="PRESENTILLNESS"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="PRESENTILLNESS">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHA+VGhpcyBwYXRpZW50IHdhcyBvbmx5IHJlY2Vu
+								dGx5IGRpc2NoYXJnZWQgZm9yIGEgcmVjdXJyZW50IEdJICAgICAgICAgICAgICAgICAgICBibGVl
+								ZA0KICAgICAgICAgICAgICAgIGFzIGRlc2NyaWJlZCBiZWxvdy4gICAgICAgICAgPC9wPg0KICAg
+								ICAgICAgICAgPHA+SGUgcHJlc2VudGVkIHRvIHRoZSBFUiB0b2RheSBjL28gYSBkYXJrIHN0b29s
+								IHllc3RlcmRheSBidXQgYQ0KICAgICAgICAgICAgICAgIG5vcm1hbCBicm93biBzdG9vbCB0b2Rh
+								eS4gT24gZXhhbSBoZSB3YXMgaHlwb3RlbnNpdmUgaW4gdGhlIDgwP3MNCiAgICAgICAgICAgICAg
+								ICByZXNvbHZlZCBhZnRlciAuLi4uIC4uLi4gLi4uLiAgICAgICAgICAgPC9wPg0KICAgICAgICAg
+								ICAgPHA+TGFiIGF0IGRpc2NoYXJnZTogR2x1Y29zZSAxMTIsIEJVTiAxNiwgY3JlYXRpbmluZSAx
+								LjEsDQogICAgICAgICAgICAgICAgZWxlY3Ryb2x5dGVzIG5vcm1hbC4gSC4gcHlsb3JpIGFudGli
+								b2R5IHBlbmRpbmcuIEFkbWlzc2lvbiBoZW1hdG9jcml0DQogICAgICAgICAgICAgICAgMTYlLCBk
+								aXNjaGFyZ2UgaGVtYXRvY3JpdCAyOSUuIFdCQyA3MzAwLCBwbGF0ZWxldCBjb3VudCAyNTYsMDAw
+								Lg0KICAgICAgICAgICAgICAgIFVyaW5hbHlzaXMgbm9ybWFsLiBVcmluZSBjdWx0dXJlOiBObyBn
+								cm93dGguIElOUiAxLjEsIFBUVCAgICAgICAgICAgICAgICAgICAgNDAuICAgICAgICAgIDwvcD4N
+								CiAgICAgICAgICAgIDxwPkhlIHdhcyB0cmFuc2Z1c2VkIHdpdGggNiB1bml0cyBvZiBwYWNrZWQg
+								cmVkIGJsb29kIGNlbGxzIHdpdGggICAgICAgICAgICAgICAgICAgIC4uLi4NCiAgICAgICAgICAg
+								ICAgICAuLi4uIC4uLi4gICAgICAgICAgPC9wPg0KICAgICAgICAgICAgPHA+R0kgZXZhbHVhdGlv
+								biAxMiBTZXB0ZW1iZXI6IENvbG9ub3Njb3B5IHNob3dlZCBzaW5nbGUgcmVkIGNsb3QgaW4NCiAg
+								ICAgICAgICAgICAgICAuLi4uIC4uLi4gLi4uLiAgICAgICAgICA8L3A+DQogICAgICAgIDwvZGl2
+								Pg==
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************************
+PHYSICAL EXAMINATION
+************************************ -->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.2.10"/>
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="29545-1"
+						displayName="PHYSICAL FINDINGS"/>
+					<title>PHYSICAL EXAMINATION</title>
+					<text>
+						<renderMultiMedia referencedObject="PHYSICALEXAM"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="PHYSICALEXAM">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPG9sPg0KICAgICAgICAgICAgICAgIDxsaT5IRUVO
+								VDogQWxsIG5vcm1hbCB0byBleGFtaW5hdGlvbi48L2xpPg0KICAgICAgICAgICAgICAgIDxsaT5I
+								ZWFydDogUlJSLCBubyBtdXJtdXIuPC9saT4NCiAgICAgICAgICAgICAgICA8bGk+VEhPUkFYICZh
+								bXA7IExVTkdTOiBDbGVhciB3aXRob3V0IHJob25jaGkgb3Igd2hlZXplLjwvbGk+DQogICAgICAg
+								ICAgICAgICAgPGxpPkFCRE9NRU46IE5vIGRpc3RlbnNpb24sIHRlbmRlcm5lc3MsIG9yIGd1YXJk
+								aW5nLCBvYmVzZSwgcG9zIGJvd2VsDQogICAgICAgICAgICAgICAgICAgIHNvdW5kcy4gICAgICAg
+								ICAgICAgPC9saT4NCiAgICAgICAgICAgICAgICA8bGk+QkFDSzogTm9ybWFsIHRvIGluc3BlY3Rp
+								b24gYW5kIHBhbHBhdGlvbiwgd2l0aG91dCB0ZW5kZXJuZXNzOyBubw0KICAgICAgICAgICAgICAg
+								ICAgICBwcmVzYWNyYWwgZWRlbWEuICAgICAgICAgICAgIDwvbGk+DQogICAgICAgICAgICAgICAg
+								PGxpPkVYVFJFTUlUSUVTOiBEb3VnaHkgZWRlbWEgYmlsYXRlcmFsbHksIGNocm9uaWMgc3Rhc2lz
+								IGNoYW5nZXMsIG5vDQogICAgICAgICAgICAgICAgICAgIGFzeW1tZXRyaWNhbCBzd2VsbGluZy4g
+								ICAgICAgICAgICAgPC9saT4NCiAgICAgICAgICAgIDwvb2w+DQogICAgICAgIDwvZGl2Pg==
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+PLAN OF CARE
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.10"/>
+					<!--  **** Plan of Care section template  **** -->
+					<code code="18776-5" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="Treatment plan"/>
+					<title>PLAN OF CARE</title>
+					<text>
+						<renderMultiMedia referencedObject="PLANOFCARE"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="PLANOFCARE">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHRhYmxlIGJvcmRlcj0iMSIgY2xhc3M9Im5hcnJf
+								dGFibGUiIHdpZHRoPSIxMDAlIj4NCiAgICAgICAgICAgICAgICA8dGhlYWQ+DQogICAgICAgICAg
+								ICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+								dGggY2xhc3M9Im5hcnJfdGgiPlBsYW5uZWQgQWN0aXZpdHk8L3RoPg0KICAgICAgICAgICAgICAg
+								ICAgICAgICAgPHRoIGNsYXNzPSJuYXJyX3RoIj5QbGFubmVkIERhdGU8L3RoPg0KICAgICAgICAg
+								ICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIDwvdGhlYWQ+DQogICAgICAgICAgICAg
+								ICAgPHRib2R5Pg0KICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAg
+								ICAgICAgICAgICAgICAgICAgICAgPHRkPkNvbG9ub3Njb3B5PC90ZD4NCiAgICAgICAgICAgICAg
+								ICAgICAgICAgIDx0ZD4yMDEyMDUxMjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQog
+								ICAgICAgICAgICAgICAgPC90Ym9keT4NCiAgICAgICAgICAgIDwvdGFibGU+DQogICAgICAgIDwv
+								ZGl2Pg==
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+PROBLEM LIST
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.5.1"/>
+					<code code="11450-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="PROBLEM LIST"/>
+					<title>PROBLEMS</title>
+					<text>
+						<renderMultiMedia referencedObject="PROBLEMLIST"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="PROBLEMLIST">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPG9sPg0KICAgICAgICAgICAgICAgIDxsaT4gICAg
+								ICAgICAgICAgICAgICAgICAgICBQbmV1bW9uaWEgOiBTdGF0dXMgLSBSZXNvbHZlZCAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvbGk+DQogICAgICAgICAgICAgICAgPGxpPiAg
+								ICAgICAgICAgICAgICAgICAgICAgIEFzdGhtYSA6IFN0YXR1cyAtIEFjdGl2ZQ0KICAgICAgICAg
+								ICAgICAgIDwvbGk+DQogICAgICAgICAgICA8L29sPg0KICAgICAgICA8L2Rpdj4=
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+PROCEDURES
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.7"/>
+					<!-- Procedures section template -->
+					<code code="47519-4" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="HISTORY OF PROCEDURES"/>
+					<title>PROCEDURES</title>
+					<text>
+						<renderMultiMedia referencedObject="PROCEDURES"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="PROCEDURES">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHRhYmxlIGJvcmRlcj0iMSIgY2xhc3M9Im5hcnJf
+								dGFibGUiIHdpZHRoPSIxMDAlIj4NCiAgICAgICAgICAgICAgICA8dGhlYWQ+DQogICAgICAgICAg
+								ICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+								dGggY2xhc3M9Im5hcnJfdGgiPlByb2NlZHVyZTwvdGg+DQogICAgICAgICAgICAgICAgICAgICAg
+								ICA8dGggY2xhc3M9Im5hcnJfdGgiPkRhdGU8L3RoPg0KICAgICAgICAgICAgICAgICAgICA8L3Ry
+								Pg0KICAgICAgICAgICAgICAgIDwvdGhlYWQ+DQogICAgICAgICAgICAgICAgPHRib2R5Pg0KICAg
+								ICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAgICAgICAgICAgICAgICAg
+								ICAgICAgPHRkPiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgQ29sb25pYyBwb2x5cGVj
+								dG9teSAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90
+								ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4xOTk4PC90ZD4NCiAgICAgICAgICAgICAg
+								ICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICA8L3Rib2R5Pg0KICAgICAgICAgICAgPC90YWJs
+								ZT4NCiAgICAgICAgPC9kaXY+
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+REASON FOR REFERRAL
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.1"/>
+					<!-- ** Reason for Referral Section Template ** -->
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="42349-1"
+						displayName="REASON FOR REFERRAL"/>
+					<title>REASON FOR REFERRAL</title>
+					<text>
+						<renderMultiMedia referencedObject="REASONFORREFERRAL"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="REASONFORREFERRAL">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHA+Q29sb25vc2NvcHk8L3A+DQogICAgICAgIDwv
+								ZGl2Pg==
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+RESULTS
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.3.1"/>
+					<!-- Entries Required -->
+					<code code="30954-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="RESULTS"/>
+					<title>RESULTS</title>
+					<text>
+						<renderMultiMedia referencedObject="RESULTS"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="RESULTS">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHRhYmxlIGNsYXNzPSJuYXJyX3RhYmxlIj4NCiAg
+								ICAgICAgICAgICAgICA8dGJvZHk+DQogICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ibmFy
+								cl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQgY29sc3Bhbj0iMiI+TEFCT1JBVE9S
+								WSBJTkZPUk1BVElPTjwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAg
+								ICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+								dGQgY29sc3Bhbj0iMiI+Q2hlbWlzdHJpZXMgYW5kIGRydWcgbGV2ZWxzPC90ZD4NCiAgICAgICAg
+								ICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJuYXJyX3Ry
+								Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4gICAgICAgICAgICAgICAgICAgICAgICAg
+								ICAgICAgIEhHQiAoTSAxMy0xOCBnL2RsOyBGIDEyLTE2DQogICAgICAgICAgICAgICAgICAgICAg
+								ICAgICAgZy9kbCkgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+								ICAgIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+MTMuMjwvdGQ+DQogICAgICAg
+								ICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90
+								ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+ICAgICAgICAgICAgICAgICAgICAgICAg
+								ICAgICAgICBXQkMgKDQuMy0xMC44IDEwKzMvdWwpICAgICAgICAgICAgICAgICAgICAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICA8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRk
+								PjYuNzwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAg
+								IDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+ICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICBQTFQgKDEzNS0xNDUgbWVxL2wpICAgICAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA8L3RkPg0KICAgICAgICAgICAg
+								ICAgICAgICAgICAgPHRkPjEyMyAoTCk8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8L3RyPg0K
+								ICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAgICAgICAgICAgICAg
+								ICAgICAgICAgPHRkIGNvbHNwYW49IjIiPkxpdmVyIEZ1bmN0aW9ucyBhbmQgT3RoZXIgTGFib3Jh
+								dG9yeSBWYWx1ZXM8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAg
+								ICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRk
+								PkFMVCAoU0dQVCk8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRkPjMxLjA8L3RkPg0K
+								ICAgICAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9
+								Im5hcnJfdHIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRkPkFTVCAoU0dPVCk8L3RkPg0K
+								ICAgICAgICAgICAgICAgICAgICAgICAgPHRkPjE4LjA8L3RkPg0KICAgICAgICAgICAgICAgICAg
+								ICA8L3RyPg0KICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAgICAg
+								ICAgICAgICAgICAgICAgICAgPHRkPkdHVDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+								dGQ+MjguMCBBbGs8L3RkPg0KICAgICAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAg
+								ICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRk
+								PlBob3M8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRkPjg2LjA8L3RkPg0KICAgICAg
+								ICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im5hcnJf
+								dHIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRkPlRvdGFsIEJpbGk8L3RkPg0KICAgICAg
+								ICAgICAgICAgICAgICAgICAgPHRkPjAuMTwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+
+								DQogICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAg
+								ICAgICAgICAgICA8dGQ+QWxidW1pbjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+
+								My4yPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAg
+								PHRyIGNsYXNzPSJuYXJyX3RyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjb2xzcGFu
+								PSIyIj5CbG9vZCBDb3VudDwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAg
+								ICAgICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAg
+								ICA8dGQ+V2hpdGUgQ291bnQ8L3RkPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRkPjcuNzwv
+								dGQ+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgIDx0ciBj
+								bGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+UGxhdGVsZXRzPC90
+								ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4xODcuMDwvdGQ+DQogICAgICAgICAgICAg
+								ICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQog
+								ICAgICAgICAgICAgICAgICAgICAgICA8dGQ+SGVtYXRvY3JpdDwvdGQ+DQogICAgICAgICAgICAg
+								ICAgICAgICAgICA8dGQ+MjMuNzwvdGQ+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAg
+								ICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAg
+								ICAgICA8dGQ+SGVtb2dsb2JpbjwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+OC4x
+								PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgPHRy
+								IGNsYXNzPSJuYXJyX3RyIj4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZCBjb2xzcGFuPSIy
+								Ij5FTEVDVFJPQ0FSRElPR1JBTSAoRUtHKSBJTkZPUk1BVElPTjwvdGQ+DQogICAgICAgICAgICAg
+								ICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQog
+								ICAgICAgICAgICAgICAgICAgICAgICA8dGQ+RUtHPC90ZD4NCiAgICAgICAgICAgICAgICAgICAg
+								ICAgIDx0ZD5TaW51cyByaHl0aG0gd2l0aG91dCBhY3V0ZSBjaGFuZ2VzPC90ZD4NCiAgICAgICAg
+								ICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICA8L3Rib2R5Pg0KICAgICAgICAgICAg
+								PC90YWJsZT4NCiAgICAgICAgPC9kaXY+
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!-- ************************************
+REVIEW OF SYSTEMS
+************************************ -->
+			<component>
+				<section>
+					<templateId root="1.3.6.1.4.1.19376.1.5.3.1.3.18"/>
+					<code codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" code="10187-3"
+						displayName="REVIEW OF SYSTEMS"/>
+					<title>REVIEW OF SYSTEMS</title>
+					<text>
+						<renderMultiMedia referencedObject="REVIEWOFSYSTEMS"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="REVIEWOFSYSTEMS">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHA+UGF0aWVudCBkZW5pZXMgcmVjZW50IGhpc3Rv
+								cnkgb2YgZmV2ZXIgb3IgbWFsYWlzZS4gUG9zaXRpdmUgZm9yDQogICAgICAgICAgICAgICAgd2Vh
+								a25lc3MgYW5kIHNob3J0bmVzcyBvZiBicmVhdGguIE9uZSBlcGlzb2RlIG9mIG1lbGVuYS4gTm8g
+								cmVjZW50DQogICAgICAgICAgICAgICAgaGVhZGFjaGVzLiBQb3NpdGl2ZSBmb3Igb3N0ZW9hcnRo
+								cml0aXMgaW4gaGlwcywga25lZXMgYW5kIGhhbmRzLg0KICAgICAgICAgICAgPC9wPg0KICAgICAg
+								ICA8L2Rpdj4=
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+SOCIAL HISTORY
+********************************************************
+-->
+			<component>
+				<!--   Social History ******** -->
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.17"/>
+					<!--  ********  Social history section template   ******** -->
+					<code code="29762-2" codeSystem="2.16.840.1.113883.6.1"
+						displayName="Social History"/>
+					<title>SOCIAL HISTORY</title>
+					<text>
+						<renderMultiMedia referencedObject="SOCIALHISTORY"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="SOCIALHISTORY">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHRhYmxlIGJvcmRlcj0iMSIgY2xhc3M9Im5hcnJf
+								dGFibGUiIHdpZHRoPSIxMDAlIj4NCiAgICAgICAgICAgICAgICA8dGhlYWQ+DQogICAgICAgICAg
+								ICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+								dGggY2xhc3M9Im5hcnJfdGgiPlNvY2lhbCBIaXN0b3J5IEVsZW1lbnQ8L3RoPg0KICAgICAgICAg
+								ICAgICAgICAgICAgICAgPHRoIGNsYXNzPSJuYXJyX3RoIj5EZXNjcmlwdGlvbjwvdGg+DQogICAg
+								ICAgICAgICAgICAgICAgICAgICA8dGggY2xhc3M9Im5hcnJfdGgiPkVmZmVjdGl2ZSBEYXRlczwv
+								dGg+DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgPC90aGVhZD4N
+								CiAgICAgICAgICAgICAgICA8dGJvZHk+DQogICAgICAgICAgICAgICAgICAgIDx0ciBjbGFzcz0i
+								bmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+ICAgICAgICAgICAgICAgICAg
+								ICAgICAgICAgICAgICAgc21va2luZyAgICAgICAgICAgICAgICAgICA8L3RkPg0KICAgICAgICAg
+								ICAgICAgICAgICAgICAgPHRkPjEgcGFjayBwZXIgZGF5PC90ZD4NCiAgICAgICAgICAgICAgICAg
+								ICAgICAgIDx0ZD4yMDA1MDUwMSB0byAyMDA5MDIyNzEzMDAwMCswNTAwPC90ZD4NCiAgICAgICAg
+								ICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJuYXJyX3Ry
+								Ij4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4gICAgICAgICAgICAgICAgICAgICAgICAg
+								ICAgICAgICBzbW9raW5nICAgICAgICAgICAgICAgICAgIDwvdGQ+DQogICAgICAgICAgICAgICAg
+								ICAgICAgICA8dGQ+Tm9uZTwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+MjAwOTAy
+								MjcxMzAwMDArMDUwMCAtIHRvZGF5PC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAg
+								ICAgICAgICAgICAgICAgICAgPHRyIGNsYXNzPSJuYXJyX3RyIj4NCiAgICAgICAgICAgICAgICAg
+								ICAgICAgIDx0ZD4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIEFsY29ob2wgY29uc3Vt
+								cHRpb24gICAgICAgICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0
+								ZD5Ob25lPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4yMDA1MDUwMSAtIDwvdGQ+
+								DQogICAgICAgICAgICAgICAgICAgIDwvdHI+DQogICAgICAgICAgICAgICAgPC90Ym9keT4NCiAg
+								ICAgICAgICAgIDwvdGFibGU+DQogICAgICAgIDwvZGl2Pg==
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+			<!--
+********************************************************
+VITAL SIGNS
+********************************************************
+-->
+			<component>
+				<section>
+					<templateId root="2.16.840.1.113883.10.20.22.2.4.1"/>
+					<code code="8716-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+						displayName="VITAL SIGNS"/>
+					<title>VITAL SIGNS</title>
+					<text>
+						<renderMultiMedia referencedObject="VITALSSIGNS"></renderMultiMedia>
+					</text>
+					<entry>
+						<observationMedia classCode="OBS" moodCode="EVN" ID="VITALSSIGNS">
+							<value mediaType="text/html" representation="B64">
+								ICAgICAgICA8ZGl2Pg0KICAgICAgICAgICAgPHRhYmxlIGJvcmRlcj0iMSIgY2xhc3M9Im5hcnJf
+								dGFibGUiIHdpZHRoPSIxMDAlIj4NCiAgICAgICAgICAgICAgICA8dGhlYWQ+DQogICAgICAgICAg
+								ICAgICAgICAgIDx0ciBjbGFzcz0ibmFycl90ciI+DQogICAgICAgICAgICAgICAgICAgICAgICA8
+								dGggYWxpZ249InJpZ2h0IiBjbGFzcz0ibmFycl90aCI+RGF0ZSAvIFRpbWU6IDwvdGg+DQogICAg
+								ICAgICAgICAgICAgICAgICAgICA8dGggY2xhc3M9Im5hcnJfdGgiPk5vdiAxNCwgMTk5OTwvdGg+
+								DQogICAgICAgICAgICAgICAgICAgICAgICA8dGggY2xhc3M9Im5hcnJfdGgiPkFwcmlsIDcsIDIw
+								MDA8L3RoPg0KICAgICAgICAgICAgICAgICAgICA8L3RyPg0KICAgICAgICAgICAgICAgIDwvdGhl
+								YWQ+DQogICAgICAgICAgICAgICAgPHRib2R5Pg0KICAgICAgICAgICAgICAgICAgICA8dHIgY2xh
+								c3M9Im5hcnJfdHIiPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRoIGFsaWduPSJsZWZ0IiBj
+								bGFzcz0ibmFycl90aCI+SGVpZ2h0PC90aD4NCiAgICAgICAgICAgICAgICAgICAgICAgIDx0ZD4g
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDE3NyBjbSAgICAgICAgICAgICAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAg
+								ICAgIDx0ZD4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIDE3NyBjbQ0KICAgICAgICAg
+								ICAgICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAg
+								ICAgICAgICAgICAgPHRyIGNsYXNzPSJuYXJyX3RyIj4NCiAgICAgICAgICAgICAgICAgICAgICAg
+								IDx0aCBhbGlnbj0ibGVmdCIgY2xhc3M9Im5hcnJfdGgiPldlaWdodDwvdGg+DQogICAgICAgICAg
+								ICAgICAgICAgICAgICA8dGQ+ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA4NiBrZyAg
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgPC90ZD4NCiAg
+								ICAgICAgICAgICAgICAgICAgICAgIDx0ZD4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+								IDg4IGtnDQogICAgICAgICAgICAgICAgICAgICAgICA8L3RkPg0KICAgICAgICAgICAgICAgICAg
+								ICA8L3RyPg0KICAgICAgICAgICAgICAgICAgICA8dHIgY2xhc3M9Im5hcnJfdHIiPg0KICAgICAg
+								ICAgICAgICAgICAgICAgICAgPHRoIGFsaWduPSJsZWZ0IiBjbGFzcz0ibmFycl90aCI+Qmxvb2Qg
+								UHJlc3N1cmU8L3RoPg0KICAgICAgICAgICAgICAgICAgICAgICAgPHRkPiAgICAgICAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgMTMyLzg2IG1tSGcgICAgICAgICAgICAgICAgICAgICAgICAgICAg
+								ICAgICAgICAgICAgICAgICAgICAgIDwvdGQ+DQogICAgICAgICAgICAgICAgICAgICAgICA8dGQ+
+								ICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAxNDUvODggbW1IZw0KICAgICAgICAgICAg
+								ICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgICAgICAgICAgICAgPC90cj4NCiAgICAgICAgICAg
+								ICAgICA8L3Rib2R5Pg0KICAgICAgICAgICAgPC90YWJsZT4NCiAgICAgICAgPC9kaXY+
+							</value>
+						</observationMedia>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

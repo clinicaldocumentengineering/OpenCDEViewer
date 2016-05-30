@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<?xml-stylesheet type="text/xsl" href="OpenCDEViewer.xsl"?>
+<ClinicalDocument xsi:schemaLocation="urn:hl7-org:v3 ../CDA.xsd" xmlns:voc="urn:hl7-org:v3/voc" xmlns="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+   <typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+   <templateId extension="AP" root="2.16.840.1.113883.2.10.1.1.9"/>
+   <id extension="15121" root="2.16.840.1.113883.2.10.1.2.1"/>
+   <code code="34122-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Informe de Anatomía Patológica"/>
+   <title>Informe de Anatomía Patológica</title>
+   <effectiveTime value="20160101000000+0100"/>
+   <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+   <languageCode code="es-AR"/>
+   <setId extension="15121" root="2.16.840.1.113883.2.10.1.2.1"/>
+   <versionNumber value="1"/>
+   <recordTarget>
+      <patientRole>
+         <id extension="ParamPatientIdExt" root="2.16.840.1.113883.19.5"/>
+         <addr>
+            <streetAddressLine>Street</streetAddressLine>
+            <city>City</city>
+            <state>tate</state>
+            <postalCode>PostalCode</postalCode>
+            <country>Country</country>
+         </addr>
+         <telecom value="tel:ParamPatientTel" use="HP"/>
+         <patient>
+            <name>
+               <given>Given</given>
+               <family>Family</family>
+            </name>
+            <administrativeGenderCode code="ParamPatientGender" codeSystem="2.16.840.1.113883.5.1"/>
+            <birthTime value="198220101000000+0200"/>
+         </patient>
+         <providerOrganization>
+            <id root="ParamCustodianId"/>
+            <name>ParamCustodianname</name>
+            <telecom value="tel:ParamCustodianTel" use="WP"/>
+            <addr>
+               <streetAddressLine>ParamCustodianStreet</streetAddressLine>
+               <city>ParamCustodianCity</city>
+               <state>ParamCustodianState</state>
+               <postalCode>ParamCustodianPostalCode</postalCode>
+               <country>ParamCustodianCountry</country>
+            </addr>
+         </providerOrganization>
+      </patientRole>
+   </recordTarget>
+   <author>
+      <time value="22220101000000+0100"/>
+      <assignedAuthor>
+         <id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+         <code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+            displayName="ParamAuthorCodeName"/>
+         <assignedPerson>
+            <name>
+               <given>ParamAuthorGiven</given>
+               <family>ParamAuthorFamily</family>
+            </name>
+         </assignedPerson>
+      </assignedAuthor>
+   </author>
+   <custodian>
+      <assignedCustodian>
+         <representedCustodianOrganization>
+            <id root="ParamCustodianId"/>
+            <name>ParamCustodianname</name>
+            <telecom value="tel:ParamCustodianTel" use="WP"/>
+            <addr>
+               <streetAddressLine>ParamCustodianStreet</streetAddressLine>
+               <city>ParamCustodianCity</city>
+               <state>ParamCustodianState</state>
+               <postalCode>ParamCustodianPostalCode</postalCode>
+               <country>ParamCustodianCountry</country>
+            </addr>
+         </representedCustodianOrganization>
+      </assignedCustodian>
+   </custodian>
+   <legalAuthenticator>
+      <time value="22220101000000+0100"/>
+      <signatureCode code="S"/>
+      <assignedEntity>
+         <id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+         <code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+            displayName="ParamAuthorCodeName"/>
+         <assignedPerson>
+            <name>
+               <given>ParamAuthorGiven</given>
+               <family>ParamAuthorFamily</family>
+            </name>
+         </assignedPerson>
+      </assignedEntity>
+   </legalAuthenticator>
+   <authenticator>
+      <time value="22220101000000+0100"/>
+      <signatureCode code="S"/>
+      <assignedEntity>
+         <id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+         <code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+            displayName="ParamAuthorCodeName"/>
+         <assignedPerson>
+            <name>
+               <given>ParamAuthorGiven</given>
+               <family>ParamAuthorFamily</family>
+            </name>
+         </assignedPerson>
+      </assignedEntity>
+   </authenticator>
+   <!--   <relatedDocument typeCode="RPLC">
+      <parentDocument>
+         <id extension="15120" root="2.16.840.1.113883.2.10.1.2.1"/>
+         <setId extension="15121" root="2.16.840.1.113883.2.10.1.2.1"/>
+         <versionNumber value="2"/>
+      </parentDocument>
+   </relatedDocument>-->
+   <component>
+      <structuredBody>
+         <component>
+            <section>
+               <code code="22636-5" displayName="Pathology report relevant history" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+               <title>BIOPSIA POR CONGELACION Y ESTUDIO DIFERIDO DEL CORTE</title>
+               <text>
+                  <paragraph>       MACROSCOPIA:</paragraph>
+                  <paragraph>  Material para congelación: </paragraph>
+                  <paragraph>C: Nódulo de mama; Fragmento de tejido fibroadiposo de 5 x 4 cm. Al corte, lesión blanquecina espiculada de 1 cm de diámetro, consistencia firme, se halla a 0.1 cm del margen mas cercano, se pintan márgenes con tinta china. </paragraph>
+                  <paragraph/>
+                  <paragraph>
+MICROSCOPIA:</paragraph>
+                  <paragraph>Las secciones muestran tumor formado por nidos de celulas grandes atipicas, que infiltran estroma fibrohialino. Franca elastosis periductal. La lesion mide sobre el preparado 1cm y se halla a 0,1cm del margen en forma infiltrativa. </paragraph>
+                  <paragraph>Rodeando la lesion se observan ductos galactoforos y tejido fibroadiposo. </paragraph>
+                  <paragraph/>
+                  <paragraph>
+DIAGNOSTICO:</paragraph>
+                  <paragraph>Nodulo mama. Reseccion. </paragraph>
+                  <paragraph>CARCINOMA DUCTAL INVASOR ( INESPECIFICO)</paragraph>
+                  <paragraph>Tamaño: 1cm.</paragraph>
+                  <paragraph>Grado nuclear: 2</paragraph>
+                  <paragraph>Grado histologico: 2</paragraph>
+                  <paragraph>Mitosis: 1</paragraph>
+                  <paragraph>Margen cercano: 0,1cm.</paragraph>
+                  <paragraph>Agresividad: leve.   </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph>
+INFORME COMPLEMENTARIO:</paragraph>
+                  <paragraph>
+Se realizó(aron) técnicas de inmunohistoquímica con métodos de recuperación antigénica (citratopH6/8/10, microondas y/o digestión enzimática según protocolo). Método de revelado: LSAB</paragraph>
+                  <paragraph>Cromógeno: DAB.</paragraph>
+                  <paragraph/>
+                  <paragraph>
+  </paragraph>
+                  <paragraph> INMUNOHISTOQUIMICA: </paragraph>
+                  <paragraph>INFORME COMPLEMENTARIO HERCEPTEST (Detección y semicuantificación del receptor c-erb-b2 / HER-2/ Neu):</paragraph>
+                  <paragraph/>
+                  <paragraph>Se realizó técnica de HERCEPTEST, para determinación del receptor c-erb-b2 / HER2/ Neu (Dako K5204) </paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph>Resultados:   </paragraph>
+                  <paragraph> </paragraph>
+                  <paragraph>Positivo intenso (3+)     </paragraph>
+                  <paragraph/>
+                  <paragraph>Valores de Referencia:</paragraph>
+                  <paragraph>* Negativo (0) =  No se observa marcación de membrana o la marcación de membrana está presente en menos del 10% de las células tumorales </paragraph>
+                  <paragraph>* Negativo (1+) = Se observa tinción de membrana apenas perceptible en más del 10% de las células tumorales. Las marcación de membrana es segmentaria o parcial.</paragraph>
+                  <paragraph>* Positivo débil (2+) = Se observa tinción de membrana débil a moderada en más del 10% de las células tumorales. La marcación se evidencia en la totalidad de la membrana plasmática (perimetral o circunferencial).</paragraph>
+                  <paragraph>* Positivo intenso (3+) = Se observa tinción de membrana intensa en más del 10% de las células tumorales. La marcación se evidencia en la totalidad de la membrana plasmática (perimetral o circunferencial).</paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph>INFORME COMPLEMENTARIO DE INMUNOHISTOQUIMICA PARA RECEPTORES HORMONALES ESTROGENICOS Y PROGESTACIONALES:</paragraph>
+                  <paragraph/>
+                  <paragraph>Receptor de Estrogenos (RE):          +   +   +</paragraph>
+                  <paragraph>Receptor de Progesterona (RP):      -</paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph>Valores de Referencia:</paragraph>
+                  <paragraph>Marcacion nuclear en menos del 10% de las celulas tumorales:           -</paragraph>
+                  <paragraph>Marcacion nuclear en el 10 al  50% de las celulas tumorales:              +</paragraph>
+                  <paragraph>Marcacion nuclear en el 50 al  70% de las celulas tumorales:           + +</paragraph>
+                  <paragraph>Marcacion nuclear en el 70 al 90% de las celulas tumorales:         + + +</paragraph>
+                  <paragraph>Marcacion nuclear en mas del 90% de las celulas tumorales:     + + + +</paragraph>
+                  <paragraph/>
+                  <paragraph/>
+                  <paragraph>  </paragraph>
+               </text>
+            </section>
+         </component>
+      </structuredBody>
+   </component>
+</ClinicalDocument>

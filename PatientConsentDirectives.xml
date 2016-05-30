@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?xml-stylesheet type="text/xsl" href="OpenCDEViewer.xsl"?>
+<!--
+  Title: US_Realm_Header_Template -->
+<ClinicalDocument xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="urn:hl7-org:v3"
+	xmlns:cda="urn:hl7-org:v3" xmlns:sdtc="urn:hl7-org:sdtc"
+	xsi:schemaLocation="urn:hl7-org:v3 ../CDA.xsd">
+	<!--
+********************************************************
+  CDA Header
+********************************************************
+  -->
+	<realmCode code="US"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<!-- General Header Constraints -->
+	<templateId root="2.16.840.1.113883.10.20.3"/>
+	<!-- Privacy Consent Directive Header Constraints -->
+	<templateId root="2.16.840.1.113883.3.445.1"/>
+	<id extension="ParamDocExt" root="2.16.840.1.113883.19.5.99999.1"/>
+	<code code="57016-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+		displayName="Privacy Policy Acknowledgement Document"/>
+	<title>Privacy Consent Authorization</title>
+	<effectiveTime value="22220101000000+0100"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-US"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="ParamPatientIdExt" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>ParamPatientStreet</streetAddressLine>
+				<city>ParamPatientCity</city>
+				<state>ParamPatientState</state>
+				<postalCode>ParamPatientIPostalCode</postalCode>
+				<country>ParamPatientCountry</country>
+			</addr>
+			<telecom value="tel:ParamPatientTel" use="HP"/>
+			<patient>
+				<name>
+					<given>ParamPatientGiven</given>
+					<family>ParamPatientFamily</family>
+				</name>
+				<administrativeGenderCode code="ParamPatientGender"
+					codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="22220101000000+0200"/>
+			</patient>
+			<providerOrganization>
+				<id root="ParamCustodianId"/>
+				<name>ParamCustodianname</name>
+				<telecom value="tel:ParamCustodianTel" use="WP"/>
+				<addr>
+					<streetAddressLine>ParamCustodianStreet</streetAddressLine>
+					<city>ParamCustodianCity</city>
+					<state>ParamCustodianState</state>
+					<postalCode>ParamCustodianPostalCode</postalCode>
+					<country>ParamCustodianCountry</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="22220101000000+0100"/>
+		<assignedAuthor>
+			<id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+			<code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+				displayName="ParamAuthorCodeName"/>
+			<assignedPerson>
+				<name>
+					<given>ParamAuthorGiven</given>
+					<family>ParamAuthorFamily</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id root="ParamCustodianId"/>
+				<name>ParamCustodianname</name>
+				<telecom value="tel:ParamCustodianTel" use="WP"/>
+				<addr>
+					<streetAddressLine>ParamCustodianStreet</streetAddressLine>
+					<city>ParamCustodianCity</city>
+					<state>ParamCustodianState</state>
+					<postalCode>ParamCustodianPostalCode</postalCode>
+					<country>ParamCustodianCountry</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+
+	<!-- Information Recipient. 
+		 One for each organitzation which the disclousure of patient documents acces is denied/authorized -->
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient classCode="ASSIGNED">
+			<addr>
+				<streetAddressLine>999999 Healthcare Drive</streetAddressLine>
+				<city>Ann Arbor</city>
+				<state>MI</state>
+				<postalCode>99999</postalCode>
+			</addr>
+			<receivedOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="1.3.6.4.1.4.1.2835.2"/>
+				<name>Ann Arbor Hospital</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	<informationRecipient typeCode="PRCP">
+		<intendedRecipient classCode="ASSIGNED">
+			<addr>
+				<streetAddressLine>999999 Healthcare Hospital B</streetAddressLine>
+				<city>Ann Arbor</city>
+				<state>MI</state>
+				<postalCode>99999</postalCode>
+			</addr>
+			<receivedOrganization classCode="ORG" determinerCode="INSTANCE">
+				<id root="1.3.6.4.1.4.1.2835.99"/>
+				<name>Ann Arbor Hospital B</name>
+			</receivedOrganization>
+		</intendedRecipient>
+	</informationRecipient>
+	
+	<legalAuthenticator>
+		<time value="22220101000000+0100"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+			<code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+				displayName="ParamAuthorCodeName"/>
+			<assignedPerson>
+				<name>
+					<given>ParamAuthorGiven</given>
+					<family>ParamAuthorFamily</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<authenticator>
+		<time value="22220101000000+0100"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="ParamAuthorIdExt" root="ParamAuthorIdRoot"/>
+			<code code="ParamAuthorCodeCode" codeSystem="2.16.840.1.113883.6.101"
+				displayName="ParamAuthorCodeName"/>
+			<assignedPerson>
+				<name>
+					<given>ParamAuthorGiven</given>
+					<family>ParamAuthorFamily</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</authenticator>
+
+	<!-- Effective time for the Privacy Consent Directive -->
+	<documentationOf typeCode="DOC">
+		<serviceEvent moodCode="EVN">
+			<templateId root="2.16.840.1.113883.3.445.3" extension="111"/>
+			<id extension="ParamPatientIdExt-9937012" root="2.16.840.1.113883.19"/>
+			<code code="57016-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"
+				displayName="Privacy Policy Acknowledgement Document"/>
+			<effectiveTime>
+				<low value="20091020"/>
+				<high value="27100221"/>
+			</effectiveTime>
+		</serviceEvent>
+	</documentationOf>
+
+	<!-- ********************************************************
+     CDA Body
+     ******************************************************** -->
+	<component>
+		<structuredBody>
+			<!-- *********************** -->
+			<!--
+********************************************************
+Privacy Consent Directive Details Section example
+********************************************************
+-->
+			<component typeCode="COMP">
+				<section classCode="DOCSECT" moodCode="EVN">
+					<templateId root="2.16.840.1.113883.3.445.17"/>
+					<code code="57016-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+					<title>Privacy Consent Directive Details</title>
+					<!-- Narrative privacy consent directive-->
+					<text mediaType="text/x-hl7-text+xml">
+						<content> PENDING TO WRITE </content>
+					</text>
+					<!--Privacy Consent Directive Entry
+						One entry for each organitzation that is denied/authorized-->
+					<!-- Ann Arbor Hospital -->
+					<entry typeCode="COMP">
+						<templateId root="2.16.840.1.113883.3.445.4"/>
+						<!-- Structured/computer-readable Privacy Consent Directive Specification -->
+						<act classCode="ACT" moodCode="DEF">
+							<templateId root="2.16.840.1.113883.3.445.5"/>
+							<!-- Purpose of use: specify the purpose of use for which the privacy consent is applicable
+									http://www.healthit.gov/sites/default/files/nhin-authorization-framework-production-specification-v2.0-1.pdf
+									Pàg 17-->
+							<code code="TREATMENT" codeSystem="2.16.840.1.113883.3.18.7.1"
+								codeSystemName="nhin-purpose" displayName="Treatment"/>
+							<statusCode code="active"/>
+							<!-- Receiving provider -->
+							<participant typeCode="IRCP" contextControlCode="OP">
+								<templateId root="2.16.840.1.113883.3.445.7"/>
+								<participantRole classCode="ASSIGNED">
+									<id root="1.3.6.4.1.4.1.2835.2"/>
+									<addr>
+										<streetAddressLine>999999 Healthcare
+											Drive</streetAddressLine>
+										<city>Ann Arbor</city>
+										<state>MI</state>
+										<postalCode>99999</postalCode>
+										<country>USA</country>
+									</addr>
+									<!-- Organization  -->
+									<playingEntity classCode="ORG">
+										<name>Ann Arbor Hospital</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+							<!-- Action -->
+							<entryRelationship typeCode="COMP" contextConductionInd="true">
+								<!-- negationInd=false specifies that the action is authorized-->
+								<act classCode="CONS" moodCode="DEF" negationInd="false">
+									<templateId root="2.16.840.1.113883.3.445.8"/>
+									<!-- Action/Operation -->
+									<code code="DISCLOSE" codeSystem="2.16.840.1.113883.5.4"
+										displayName="Disclose" codeSystemName="ActConsentType"/>
+								</act>
+							</entryRelationship>
+							<!-- Health Information Privacy Policy and Obligation -->
+							<entryRelationship typeCode="REFR">
+								<templateId root="2.16.840.1.113883.3.445.13"/>
+								<!-- Policy Reference -->
+								<act classCode="CONS" moodCode="DEF">
+									<!-- Codesystem and code must be repalced by OpenCDA Rules values -->
+									<code codeSystemName="OpenCDA Rules" code="999" codeSystem="2.16.840.1.99999"/>
+									<precondition typeCode="PRCN">
+										<templateId root="2.16.840.1.113883.3.445.14"/>
+										<!-- Obligation -->
+										<criterion classCode="OBS" moodCode="EVN.CRT">
+											<code code="AUDIT"
+												displayName="Audit access to information"
+												codeSystemName="OpenCDA Obligation"
+												codeSystem="2.16.840.1.99999999"/>
+										</criterion>
+									</precondition>
+								</act>
+							</entryRelationship>
+						</act>
+					</entry>
+					<!-- Ann Arbor Hospital B -->
+					<entry typeCode="COMP">
+						<templateId root="2.16.840.1.113883.3.445.4"/>
+						<!-- Structured/computer-readable Privacy Consent Directive Specification -->
+						<act classCode="ACT" moodCode="DEF">
+							<templateId root="2.16.840.1.113883.3.445.5"/>
+							<!-- Purpose of use: specify the purpose of use for which the privacy consent is applicable
+									http://www.healthit.gov/sites/default/files/nhin-authorization-framework-production-specification-v2.0-1.pdf
+									Pàg 17-->
+							<code code="TREATMENT" codeSystem="2.16.840.1.113883.3.18.7.1"
+								codeSystemName="nhin-purpose" displayName="Treatment"/>
+							<statusCode code="active"/>
+							<!-- Receiving provider -->
+							<participant typeCode="IRCP" contextControlCode="OP">
+								<templateId root="2.16.840.1.113883.3.445.7"/>
+								<participantRole classCode="ASSIGNED">
+									<id root="1.3.6.4.1.4.1.2835.99"/>
+									<addr>
+										<streetAddressLine>999999 Healthcare
+											Drive</streetAddressLine>
+										<city>Ann Arbor</city>
+										<state>MI</state>
+										<postalCode>99999</postalCode>
+										<country>USA</country>
+									</addr>
+									<!-- Organization  -->
+									<playingEntity classCode="ORG">
+										<name>Ann Arbor Hospital B</name>
+									</playingEntity>
+								</participantRole>
+							</participant>
+							<!-- Action -->
+							<entryRelationship typeCode="COMP" contextConductionInd="true">
+								<!-- negationInd=false specifies that the action is authorized-->
+								<act classCode="CONS" moodCode="DEF" negationInd="true">
+									<templateId root="2.16.840.1.113883.3.445.8"/>
+									<!-- Action/Operation -->
+									<code code="DISCLOSE" codeSystem="2.16.840.1.113883.5.4"
+										displayName="Disclose" codeSystemName="ActConsentType"/>
+								</act>
+							</entryRelationship>
+							<!-- Health Information Privacy Policy and Obligation -->
+							<entryRelationship typeCode="REFR">
+								<templateId root="2.16.840.1.113883.3.445.13"/>
+								<!-- Policy Reference -->
+								<act classCode="CONS" moodCode="DEF">
+									<!-- Codesystem and code must be repalced by OpenCDA Rules values -->
+									<code codeSystemName="OpenCDA Rules" code="999" codeSystem="2.16.840.1.99999"/>
+									<precondition typeCode="PRCN">
+										<templateId root="2.16.840.1.113883.3.445.14"/>
+										<!-- Obligation -->
+										<criterion classCode="OBS" moodCode="EVN.CRT">
+											<code code="AUDIT"
+												displayName="Audit access to information"
+												codeSystemName="OpenCDA Obligation"
+												codeSystem="2.16.840.1.99999999"/>
+										</criterion>
+									</precondition>
+								</act>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

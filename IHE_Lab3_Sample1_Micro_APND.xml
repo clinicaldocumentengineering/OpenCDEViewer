@@ -1,0 +1,303 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 (http://www.altova.com) by Len Gallagher (NIST) -->
+<?xml-stylesheet type="text/xsl" href="OpenCDEViewer.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2" xsi:schemaLocation="urn:hl7-org:v3 ../CDA.xsd">
+	<realmCode code="USA"/>
+	<typeId root="2.16.840.1.113883.1.3" extension="POCD_HD000040"/>
+	<templateId root="2.16.840.1.113883.3.27.1776" assigningAuthorityName="CDA/R2"/>
+	<templateId root="1.3.6.1.4.1.19376.1.3.3" assigningAuthorityName="IHE Labv3"/>
+	<id extension="Demo1_Doc5_A_IHE_Lab3_Multi_CBC_GTT_GS" root="2.16.840.1.113883.3.72.5" assigningAuthorityName="NIST Test Laboratory"/>
+	<code code="18725-2" displayName="MICROBIOLOGY STUDIES" codeSystemName="LOINC" codeSystem="2.16.840.1.113883.6.1"/>
+	<effectiveTime value="20140718091500+0100"/>
+	<confidentialityCode code="N" displayName="Normal" codeSystemName="HL7 Confidentiality" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-US"/>
+	<setId extension="IHE_Lab3_NoError_CBC" root="2.16.840.1.113883.3.72.5" assigningAuthorityName="NIST Healthcare project"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="Demo1" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>1357 Amber Drive</streetAddressLine>
+				<city>Beaverton</city>
+				<state>OR</state>
+				<postalCode>97867</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:(816)276-6909" use="HP"/>
+			<patient>
+				<name>
+					<given>Henry</given>
+					<family>Levin</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19630205000000+0200"/>
+			</patient>
+			<providerOrganization>
+				<id root="2.16.840.1.113883.4.6"/>
+				<name>Community Health and Hospitals</name>
+				<telecom use="WP" value="tel: 555-555-5000"/>
+				<addr>
+					<streetAddressLine>1001 Village Avenue</streetAddressLine>
+					<city>Portland</city>
+					<state>OR</state>
+					<postalCode>99123</postalCode>
+					<country>US</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="20140718091500+0100"/>
+		<assignedAuthor>
+			<id extension="Microbiology1" root="ParamAuthorIdRoot"/>
+			<code code="246QM0900X" codeSystem="2.16.840.1.113883.6.101"
+				displayName="Laboratory Microbiology"/>
+			<assignedPerson>
+				<name>
+					<given>Jessie</given>
+					<family>Irvine</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="99999999" root="2.16.840.1.113883.4.2"/>
+				<name>Community Health and Hospitals</name>
+				<telecom value="tel: 555-555-1002" use="WP"/>
+				<addr use="WP">
+					<streetAddressLine>1002 Healthcare Drive </streetAddressLine>
+					<city>Portland</city>
+					<state>OR</state>
+					<postalCode>99123</postalCode>
+					<country>US</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value="20140718091500+0100"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="Microbiology1" root="ParamAuthorIdRoot"/>
+			<code code="246QM0900X" codeSystem="2.16.840.1.113883.6.101"
+				displayName="Laboratory Microbiology"/>
+			<assignedPerson>
+				<name>
+					<given>Jessie</given>
+					<family>Irvine</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<inFulfillmentOf typeCode="FLFS">
+		<order>
+			<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="Demo2-POLB_OBS_RQO_LenGalla_CBC_20071123" root="2.16.840.1.113883.3.72.5"/>
+		</order>
+	</inFulfillmentOf>
+	<documentationOf>
+		<serviceEvent classCode="PCPR">
+			<id extension="Demo1-9937012" root="2.16.840.1.113883.19"/>
+			<effectiveTime>
+				<low value="20140718091500+0100"/>
+				<high value="20140718091500+0100"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<templateId root="1.3.6.1.4.1.19376.1.3.3.1.7" assigningAuthorityName="IHE Labv3"/>
+				<time>
+					<low value="20140718091500+0100"/>
+					<high value="20140718091500+0100"/>
+				</time>
+				<assignedEntity>
+					<id extension="1" root="1.3.6.4.1.4.1.2835.1"/>
+					<code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician"/>
+					<addr>
+						<streetAddressLine>100 Bureau Drive</streetAddressLine>
+						<city>Gaithersburg Md</city>
+					</addr>
+					<telecom value="555-333-2222"/>
+					<assignedPerson>
+						<name>
+							<given>Jessie</given>
+							<family>Irvine</family>
+						</name>
+					</assignedPerson>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<relatedDocument typeCode="APND">
+		<parentDocument>
+			<id extension="Demo1_Doc5_IHE_Lab3_NoError_CBC" root="2.16.840.1.113883.3.72.5" assigningAuthorityName="NIST Healthcare project"/>
+		</parentDocument>
+	</relatedDocument>
+	<component>
+		<structuredBody>
+			<component>
+				<!--Microbiology-->
+				<section>
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1" assigningAuthorityName="IHE Labv3"/>
+					<code code="18725-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="MICROBIOLOGY STUDIES"/>
+					<title>Microbiology Studies</title>
+					<text>
+						<br/>
+						<table border="1">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Status</th>
+									<th>Time</th>
+									<th>Value</th>
+									<th>Observed Quantity</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Observed Entity</td>
+									<td>completed</td>
+									<td>20140718091500</td>
+									<td>No White Blood Cells</td>
+									<td/>
+								</tr>
+								<tr>
+									<td>Observed Entity</td>
+									<td>completed</td>
+									<td>20140718091500</td>
+									<td>Gram positive cocci in cluster</td>
+									<td>+</td>
+								</tr>
+								<tr>
+									<td>Observed Entity</td>
+									<td>completed</td>
+									<td>20140718091500</td>
+									<td>Gram negative bacilli
+										</td>
+									<td>&gt;++
+										</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<templateId root="1.3.6.1.4.1.19376.1.3.1" assigningAuthorityName="IHE Labv3"/>
+						<act classCode="ACT" moodCode="EVN">
+							<code code="32187-7" codeSystem="2.16.840.1.113883.6.1" displayName="Microscopic Observation"/>
+							<!-- code code="10357-2" codeSystem="2.16.840.1.113883.6.1" displayName="Micro_GramStainWound"/ -->
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<procedure classCode="PROC" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.2" assigningAuthorityName="IHE Labv3"/>
+									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC"/>
+									<effectiveTime/>
+									<participant typeCode="PRD">
+										<participantRole classCode="SPEC">
+											<id/>
+											<playingEntity>
+												<code/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+									<entryRelationship typeCode="COMP">
+										<act classCode="ACT" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.3" assigningAuthorityName="IHE Labv3"/>
+											<code code="SPRECEIVE" codeSystem="1.3.5.1.4.1.19376.1.5.3.2" codeSystemName="IHE ActCode"/>
+											<effectiveTime/>
+										</act>
+									</entryRelationship>
+								</procedure>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="CLUSTER" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.5" assigningAuthorityName="IHE Labv3"/>
+									<id extension="3b080966-e248-46c2-8342-67ec3aa6ac52" root="2.16.840.1.113883.3.72.5"/>
+									<statusCode code="completed"/>
+									<specimen typeCode="SPC">
+										<templateId root="1.3.1.4.1.19376.1.3.1.2"/>
+										<specimenRole classCode="SPEC">
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="e918fc96-68d7-4ea9-b06f-98a3786b0be0" root="2.16.840.1.113883.3.72.5"/>
+											<specimenPlayingEntity classCode="MIC" determinerCode="INSTANCE">
+												<code displayName="Skin Wound"/>
+											</specimenPlayingEntity>
+											<lab:productOf typeCode="PRD">
+												<lab:procedure classCode="PROC" moodCode="EVN">
+													<id extension="IdOfProcessThatProducedSpecimenIfKnown"/>
+													<code>
+														<originalText>ProcessThatProducedSpecimenIfKnown</originalText>
+													</code>
+												</lab:procedure>
+											</lab:productOf>
+										</specimenRole>
+									</specimen>
+									<component typeCode="COMP">
+										<sequenceNumber value="1"/>
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6" assigningAuthorityName="IHE Labv3"/>
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="65746db5-b0d2-46b7-adfc-c24af717bb63" root="2.16.840.1.113883.3.72.5"/>
+											<code displayName="Observed Entity"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20140718091500+0100"/>
+											<value xsi:type="ST">No White Blood Cells</value>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<sequenceNumber value="2"/>
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6" assigningAuthorityName="IHE Labv3"/>
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="993217c1-1ceb-4a55-9eb6-6b288b901707" root="2.16.840.1.113883.3.72.5"/>
+											<code displayName="Observed Entity"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20140718091500+0100"/>
+											<value xsi:type="ST">Gram positive cocci in cluster</value>
+											<specimen typeCode="SPC">
+												<specimenRole classCode="SPEC">
+													<id/>
+												</specimenRole>
+											</specimen>
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="17ea8a97-985c-43cb-b0e5-bb95bda94a27" root="2.16.840.1.113883.3.72.5"/>
+													<code displayName="Observed Quantity"/>
+													<statusCode code="completed"/>
+													<effectiveTime value="20140718091500+0100"/>
+													<value xsi:type="ST">+</value>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<sequenceNumber value="3"/>
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId assigningAuthorityName="IHE Labv3" root="1.3.6.1.4.1.19376.1.3.1.6"/>
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="320b374b-8a9d-4ac2-81ac-48e408ea47cd" root="2.16.840.1.113883.3.72.5"/>
+											<code displayName="Observed Entity"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20140718091500+0100"/>
+											<value xsi:type="ST">Gram negative bacilli
+												</value>
+											<specimen typeCode="SPC">
+												<specimenRole classCode="SPEC">
+													<id/>
+												</specimenRole>
+											</specimen>
+											<entryRelationship typeCode="COMP">
+												<observation classCode="OBS" moodCode="EVN">
+													<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="d422c5d8-8fdb-4941-bc2e-b72e1fee2592" root="2.16.840.1.113883.3.72.5"/>
+													<code displayName="Observed Quantity"/>
+													<statusCode code="completed"/>
+													<effectiveTime value="20140718091500+0100"/>
+													<value xsi:type="ST">>++
+														</value>
+												</observation>
+											</entryRelationship>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>

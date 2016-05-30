@@ -1,0 +1,422 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2012 rel. 2 (http://www.altova.com) by Len Gallagher (NIST) -->
+<?xml-stylesheet type="text/xsl" href="OpenCDEViewer.xsl"?>
+<ClinicalDocument xmlns="urn:hl7-org:v3" xmlns:cda="urn:hl7-org:v3" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:lab="urn:oid:1.3.6.1.4.1.19376.1.3.2" xsi:schemaLocation="urn:hl7-org:v3 ../CDA.xsd">
+	<realmCode code="UV"/>
+	<typeId extension="POCD_HD000040" root="2.16.840.1.113883.1.3"/>
+	<templateId root="2.16.840.1.113883.3.27.1776" assigningAuthorityName="CDA/R2"/>
+	<templateId root="1.3.6.1.4.1.19376.1.3.3" assigningAuthorityName="IHE Labv3"/>
+	<id extension="Demo1_Doc5_IHE_Lab3_NoError_CBC" root="2.16.840.1.113883.3.72.5" assigningAuthorityName="NIST Healthcare project"/>
+	<code code="18768-2" codeSystemName="LOINC" displayName="CELL COUNTS+DIFFERENTIAL STUDIES" codeSystem="2.16.840.1.113883.6.1"/>
+	<effectiveTime value="20140715191500+0100"/>
+	<confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
+	<languageCode code="en-US"/>
+	<setId extension="IHE_Lab3_NoError_CBC" root="2.16.840.1.113883.3.72.5" assigningAuthorityName="NIST Healthcare project"/>
+	<versionNumber value="1"/>
+	<recordTarget>
+		<patientRole>
+			<id extension="Demo1" root="2.16.840.1.113883.19.5"/>
+			<addr>
+				<streetAddressLine>1357 Amber Drive</streetAddressLine>
+				<city>Beaverton</city>
+				<state>OR</state>
+				<postalCode>97867</postalCode>
+				<country>US</country>
+			</addr>
+			<telecom value="tel:(816)276-6909" use="HP"/>
+			<patient>
+				<name>
+					<given>Henry</given>
+					<family>Levin</family>
+				</name>
+				<administrativeGenderCode code="M" codeSystem="2.16.840.1.113883.5.1"/>
+				<birthTime value="19630205000000+0200"/>
+			</patient>
+			<providerOrganization>
+				<id root="2.16.840.1.113883.4.6"/>
+				<name>Community Health and Hospitals</name>
+				<telecom use="WP" value="tel: 555-555-5000"/>
+				<addr>
+					<streetAddressLine>1001 Village Avenue</streetAddressLine>
+					<city>Portland</city>
+					<state>OR</state>
+					<postalCode>99123</postalCode>
+					<country>US</country>
+				</addr>
+			</providerOrganization>
+		</patientRole>
+	</recordTarget>
+	<author>
+		<time value="20140517081500+0100"/>
+		<assignedAuthor>
+			<id extension="Laboratory1" root="ParamAuthorIdRoot"/>
+			<code code="246QL0901X" codeSystem="2.16.840.1.113883.6.101"
+				displayName="Laboratory Management, Diplomate"/>
+			<assignedPerson>
+				<name>
+					<given>Katherine</given>
+					<family>Austin</family>
+				</name>
+			</assignedPerson>
+		</assignedAuthor>
+	</author>
+	<custodian>
+		<assignedCustodian>
+			<representedCustodianOrganization>
+				<id extension="99999999" root="2.16.840.1.113883.4.2"/>
+				<name>Community Health and Hospitals</name>
+				<telecom value="tel: 555-555-1002" use="WP"/>
+				<addr use="WP">
+					<streetAddressLine>1002 Healthcare Drive </streetAddressLine>
+					<city>Portland</city>
+					<state>OR</state>
+					<postalCode>99123</postalCode>
+					<country>US</country>
+				</addr>
+			</representedCustodianOrganization>
+		</assignedCustodian>
+	</custodian>
+	<legalAuthenticator>
+		<time value="20140517081500+0100"/>
+		<signatureCode code="S"/>
+		<assignedEntity>
+			<id extension="Laboratory1" root="ParamAuthorIdRoot"/>
+			<code code="246QL0901X" codeSystem="2.16.840.1.113883.6.101"
+				displayName="Laboratory Management, Diplomate"/>
+			<assignedPerson>
+				<name>
+					<given>Katherine</given>
+					<family>Austin</family>
+				</name>
+			</assignedPerson>
+		</assignedEntity>
+	</legalAuthenticator>
+	<inFulfillmentOf typeCode="FLFS">
+		<order>
+			<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="Demo2-POLB_OBS_RQO_LenGalla_CBC_20071123" root="2.16.840.1.113883.3.72.5"/>
+		</order>
+	</inFulfillmentOf>
+	<documentationOf>
+		<serviceEvent classCode="PCPR">
+			<id extension="ParamPatientIdExt-9937012" root="2.16.840.1.113883.19"/>
+			<effectiveTime>
+				<low value="20140715191500+0100"/>
+				<high value="20140715191500+0100"/>
+			</effectiveTime>
+			<performer typeCode="PRF">
+				<templateId root="1.3.6.1.4.1.19376.1.3.3.1.7" assigningAuthorityName="IHE Labv3"/>
+				<time>
+					<low value="20140715191500+0100"/>
+					<high value="20140715191500+0100"/>
+				</time>
+				<assignedEntity>
+					<id extension="1" root="1.3.6.4.1.4.1.2835.1"/>
+					<code code="59058001" codeSystem="2.16.840.1.113883.6.96" codeSystemName="SNOMED CT" displayName="General Physician"/>
+					<addr>
+						<streetAddressLine>100 Bureau Drive</streetAddressLine>
+						<city>Gaithersburg Md</city>
+					</addr>
+					<telecom value="555-333-2222"/>
+					<assignedPerson>
+						<name>
+							<given>Bonnie</given>
+							<family>Lewis</family>
+						</name>
+					</assignedPerson>
+				</assignedEntity>
+			</performer>
+		</serviceEvent>
+	</documentationOf>
+	<component>
+		<structuredBody>
+			<component>
+				<section>
+					<templateId root="1.3.6.1.4.1.19376.1.3.3.2.1" assigningAuthorityName="IHE Labv3"/>
+					<code code="18768-2" codeSystemName="LOINC" displayName="CELL COUNTS+DIFFERENTIAL STUDIES" codeSystem="2.16.840.1.113883.6.1"/>
+					<title>CELL COUNTS+DIFFERENTIAL STUDIES</title>
+					<text>
+						<table border="1">
+							<thead>
+								<tr>
+									<th>Name</th>
+									<th>Status</th>
+									<th>Time</th>
+									<th>Reference Range</th>
+									<th>Unit</th>
+									<th>Int.c.</th>
+									<th>Value</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Leukocytes</td>
+									<td>completed</td>
+									<td>20140715191500</td>
+									<td>4.5  11.0</td>
+									<td>10*9/L</td>
+									<td>N</td>
+									<td>8.9</td>
+								</tr>
+								<tr>
+									<td>Erythrocytes</td>
+									<td>completed</td>
+									<td>20140715191500</td>
+									<td>4.6  6.2</td>
+									<td>10*12/L</td>
+									<td>N</td>
+									<td>5.9</td>
+								</tr>
+								<tr>
+									<td>Hematocrit</td>
+									<td>completed</td>
+									<td>20140715191500</td>
+									<td>40  54</td>
+									<td>%</td>
+									<td>N</td>
+									<td>46</td>
+								</tr>
+								<tr>
+									<td>Platelets</td>
+									<td>completed</td>
+									<td>20140715191500</td>
+									<td>150  400</td>
+									<td>10*9/L</td>
+									<td>N</td>
+									<td>363</td>
+								</tr>
+							</tbody>
+						</table>
+					</text>
+					<entry typeCode="DRIV">
+						<templateId root="1.3.6.1.4.1.19376.1.3.1" extension="Lab.Report.Data.Processing.Entry" assigningAuthorityName="IHE Labv3"/>
+						<act classCode="ACT" moodCode="EVN">
+							<code/>
+							<statusCode code="completed"/>
+							<entryRelationship typeCode="COMP">
+								<procedure classCode="PROC" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.2" assigningAuthorityName="IHE Labv3"/>
+									<code code="33882-2" codeSystem="2.16.840.1.113883.6.1" displayName="Specimen collection" codeSystemName="LOINC"/>
+									<effectiveTime value="20140715191500+0100"/>
+									<specimen typeCode="SPC">
+										<specimenRole classCode="SPEC">
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="e918fc96-68d7-4ea9-b06f-98a3786b0be0" root="2.16.840.1.113883.3.72.5"/>
+											<specimenPlayingEntity>
+												<code code="P" codeSystem="2.16.840.1.113883.5.111.16515" codeSystemName="RoleCode - SpecimenRoleType" displayName="Patient">
+													<originalText>A specimen that has been collected from a patient.</originalText>
+												</code>
+											</specimenPlayingEntity>
+										</specimenRole>
+									</specimen>
+									<participant typeCode="PRD">
+										<participantRole classCode="SPEC">
+											<id extension="SomeKnownEntity" root="2.16.840.1.113883.3.72.5" assigningAuthorityName="NIST Healthcare project"/>
+											<playingEntity>
+												<code/>
+											</playingEntity>
+										</participantRole>
+									</participant>
+								</procedure>
+							</entryRelationship>
+							<entryRelationship typeCode="COMP">
+								<organizer classCode="BATTERY" moodCode="EVN">
+									<templateId root="1.3.6.1.4.1.19376.1.3.1.4" assigningAuthorityName="IHE Labv3"/>
+									<id extension="6be473d1-2fb8-4b39-8a10-c0527d017366" root="2.16.840.1.113883.3.72.5"/>
+									<code code="24317-0" codeSystem="2.16.840.1.113883.6.1" displayName="Hemogram and Platelets Panel"/>
+									<statusCode code="completed"/>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6" assigningAuthorityName="IHE Labv3"/>
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="f833f003-962f-46cd-8bd0-7b602b0b6616" root="2.16.840.1.113883.3.72.5"/>
+											<code code="6690-2" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Leukocytes"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20140715191500+0100"/>
+											<value xsi:type="PQ" unit="10*9/L" value="8.9"/>
+											<interpretationCode code="N"/>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="10*9/L" value="4.5" inclusive="true"/>
+														<high unit="10*9/L" value="11.0" inclusive="true"/>
+													</value>
+													<interpretationCode code="N"/>
+													<lab:precondition typeCode="PRCN">
+														<criterion classCode="COND">
+															<code code="21612-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Age - Reported"/>
+															<value xsi:type="IVL_PQ">
+																<low inclusive="true" unit="a" value="18"/>
+															</value>
+														</criterion>
+													</lab:precondition>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="10*9/L" value="11.0" inclusive="false"/>
+													</value>
+													<interpretationCode code="H"/>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<high unit="10*9/L" value="4.5" inclusive="false"/>
+													</value>
+													<interpretationCode code="L"/>
+												</observationRange>
+											</referenceRange>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6" assigningAuthorityName="IHE Labv3"/>
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="62aa5dfd-fb22-445c-8db3-caee47eccd9e" root="2.16.840.1.113883.3.72.5"/>
+											<code code="789-8" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Erythrocytes"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20140715191500+0100"/>
+											<value xsi:type="PQ" unit="10*12/L" value="5.9"/>
+											<interpretationCode code="N"/>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="10*12/L" value="4.6" inclusive="true"/>
+														<high unit="10*12/L" value="6.2" inclusive="true"/>
+													</value>
+													<interpretationCode code="N"/>
+													<lab:precondition typeCode="PRCN">
+														<criterion classCode="COND">
+															<code code="21612-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Age - Reported"/>
+															<value xsi:type="IVL_PQ">
+																<low inclusive="true" unit="a" value="18"/>
+															</value>
+														</criterion>
+													</lab:precondition>
+													<lab:precondition typeCode="PRCN">
+														<criterion classCode="COND">
+															<code codeSystem="2.16.840.1.113883.1.11.1" codeSystemName="Administrative Gender"/>
+															<value xsi:type="CD" code="M" displayName="Male"/>
+														</criterion>
+													</lab:precondition>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="10*12/L" value="6.2" inclusive="false"/>
+													</value>
+													<interpretationCode code="H"/>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<high unit="10*12/L" value="4.6" inclusive="false"/>
+													</value>
+													<interpretationCode code="L"/>
+												</observationRange>
+											</referenceRange>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6" assigningAuthorityName="IHE Labv3"/>
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="9f061318-cbae-4ce3-9905-64eecd7edb83" root="2.16.840.1.113883.3.72.5"/>
+											<code code="4544-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Hematocrit"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20140715191500+0100"/>
+											<value xsi:type="PQ" unit="%" value="46"/>
+											<interpretationCode code="N"/>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="%" value="40" inclusive="true"/>
+														<high unit="%" value="54" inclusive="true"/>
+													</value>
+													<interpretationCode code="N"/>
+													<lab:precondition typeCode="PRCN">
+														<criterion classCode="COND">
+															<code code="21612-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Age - Reported"/>
+															<value xsi:type="IVL_PQ">
+																<low inclusive="true" unit="a" value="18"/>
+															</value>
+														</criterion>
+													</lab:precondition>
+													<lab:precondition typeCode="PRCN">
+														<criterion classCode="COND">
+															<code codeSystem="2.16.840.1.113883.1.11.1" codeSystemName="Administrative Gender"/>
+															<value xsi:type="CD" code="M" displayName="Male"/>
+														</criterion>
+													</lab:precondition>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="%" value="54" inclusive="false"/>
+													</value>
+													<interpretationCode code="H"/>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<high unit="%" value="40" inclusive="false"/>
+													</value>
+													<interpretationCode code="L"/>
+												</observationRange>
+											</referenceRange>
+										</observation>
+									</component>
+									<component typeCode="COMP">
+										<observation classCode="OBS" moodCode="EVN">
+											<templateId root="1.3.6.1.4.1.19376.1.3.1.6" assigningAuthorityName="IHE Labv3"/>
+											<id assigningAuthorityName="NIST HL7 Test Laboratory" extension="15545035-4e76-4342-b2d6-ff4efbe80c41" root="2.16.840.1.113883.3.72.5"/>
+											<code code="777-3" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Platelets"/>
+											<statusCode code="completed"/>
+											<effectiveTime value="20140715191500+0100"/>
+											<value xsi:type="PQ" unit="10*9/L" value="363"/>
+											<interpretationCode code="N"/>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="10*9/L" value="150" inclusive="true"/>
+														<high unit="10*9/L" value="400" inclusive="true"/>
+													</value>
+													<interpretationCode code="N"/>
+													<lab:precondition typeCode="PRCN">
+														<criterion classCode="COND">
+															<code code="21612-7" codeSystem="2.16.840.1.113883.6.1" codeSystemName="LOINC" displayName="Patient Age - Reported"/>
+															<value xsi:type="IVL_PQ">
+																<low inclusive="true" unit="a" value="18"/>
+															</value>
+														</criterion>
+													</lab:precondition>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<low unit="10*9/L" value="400" inclusive="false"/>
+													</value>
+													<interpretationCode code="H"/>
+												</observationRange>
+											</referenceRange>
+											<referenceRange typeCode="REFV">
+												<observationRange classCode="OBS" moodCode="EVN.CRT">
+													<value xsi:type="IVL_PQ">
+														<high unit="10*9/L" value="150" inclusive="false"/>
+													</value>
+													<interpretationCode code="L"/>
+												</observationRange>
+											</referenceRange>
+										</observation>
+									</component>
+								</organizer>
+							</entryRelationship>
+						</act>
+					</entry>
+				</section>
+			</component>
+		</structuredBody>
+	</component>
+</ClinicalDocument>
