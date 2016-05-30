@@ -1,0 +1,5 @@
+OpenCDE Viewer
+Copyright 2015-2016 Clinical Document Engineering
+
+This product includes software developed at
+Clinical Document Engineering (http://clinicaldocumentengineering.com/).
