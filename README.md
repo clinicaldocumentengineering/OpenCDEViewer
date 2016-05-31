@@ -1,4 +1,5 @@
-![logo](http://clinicaldocumentengineering.com/assets/logo/OpenCDA_logo_grey.png)OpenCDE Viewer
+![logo](http://clinicaldocumentengineering.com/assets/logo/OpenCDA_logo_grey.png)
+OpenCDE Viewer
 =======
 __OpenCDE Viewer__ is a web based component, that just requires a web browser to display HL7 CDA documents. 
 
