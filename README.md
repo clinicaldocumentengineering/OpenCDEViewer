@@ -7,16 +7,16 @@ OpenCDE Viewer is a web based component, that just requires a web browser to dis
   *  OpenCDE Viewer does not require any software installation, once source files are copied, just double click on CDA files. 
 
 ### Documentation
-For documentation on OpenCDE Viewer please review /doc folder. It inclues:
+For documentation on OpenCDE Viewer please review /doc folder. It includes:
     * PDF slides documentation.
     * Youtube video URL: https://youtu.be/Hw5yRqcPbyE 
 
 ### Main features
  * HL7 CDA.xsl rendering plus: 
-    * PDF Documents, embedded as a base64.
-    * Structured documents where sections text is included as base64 encoded HTML.
-    * ObservationMedia elements that include base64 encoded jpeg or gif images.
-    * User defined style sheets.
+   * PDF Documents, embedded as a base64.
+   * Structured documents where sections text is included as base64 encoded HTML.
+   * ObservationMedia elements that include base64 encoded jpeg or gif images.
+   * User defined style sheets.
   * One line header summary plus a full header view.
   * Sections explorer/navigation tree.
   * Notifications: relationships & keywords
@@ -29,7 +29,7 @@ To test with your CDA, copy it to /src folder and include the following processi
 Due to most browsers security restrictions, OpenCDEViewer.xsl and input CDAs documents must be at the same folder (specially when working in local mode), these the reason why source xslt and sample documents are at the same folder.
 Provided source code is prepared to be tested locally, without needing a web server.
  * Firefox: all features run in both local/server mode.
- * Chrome: regarding some security restrictions on referencing local xslt (see: http://stackoverflow.com/questions/3828898/can-chrome-be-made-to-perform-an-xsl-transform-on-a-local-file) by default OpenCDE Viewer won't run on firefox, to overcome that, just runt Chrome with --allow-file-access-from-files parameter. Inside a web browser OpenCDE Viewer runs perfect.
+ * Chrome: regarding some security restrictions on referencing local xslt (see: http://stackoverflow.com/questions/3828898/can-chrome-be-made-to-perform-an-xsl-transform-on-a-local-file) by default OpenCDE Viewer won't run on Firefox, to overcome that, just runt Chrome with --allow-file-access-from-files parameter. Inside a web browser OpenCDE Viewer runs perfect.
  * Safari: all features run in both local/server mode.
  * Internet explorer: all features run in both local/server mode except embedded PDF and HTML narrative text, as for a browser restriction as described at http://stackoverflow.com/questions/18627370/workaround-of-showing-a-base64-pdf-on-ie9.
 
