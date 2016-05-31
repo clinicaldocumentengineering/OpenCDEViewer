@@ -1,4 +1,4 @@
-# OpenCDEViewer
+![logo](http://clinicaldocumentengineering.com/assets/logo/OpenCDE_Logo_grey.png)# OpenCDEViewer
 OpenCDE Viewer is a web based component, that just requires a web browser to display HL7 CDA documents. 
 
 ### Getting Started
