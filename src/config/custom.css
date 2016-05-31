@@ -1,0 +1,58 @@
+/* 
+    File: Custom.css
+    Created: April 2016
+    Authors: Martí Pàmies / Rafael Rosa
+    Description: If CDA narrative elements include styleCode attributes, and those are not
+                 defined by the standard, these values are propagated to output html
+                 using class  attributes, to allow user defined styles.
+                 This custom.css is always associated with output html so, if a propagated styleCode
+                 is defined at this file as a css style, it will be applied to output
+*/
+/*
+ Licensed to Clinical Document Engineering (CDE) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ CDE licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+*/
+.Problem {
+  color: #003366;
+  background-color: #FFFFFF;
+  font-family: Arial;
+}
+
+.Code {
+  color: #003366;
+  background-color: #FFFFFF;
+  font-family: Arial;
+  font-size: 10px;
+}
+
+.Status {
+  color: #003366;
+  background-color: #FFFFFF;
+  font-family: Arial;
+  font-size: 10px;
+}
+
+.Name {
+  color: #003366;
+  background-color: #ccccff;
+  font-family: Arial;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.Onset {
+  color: #003366;
+  background-color: #ccccff;
+  font-family: Arial;
+  font-size: 10px;
+}

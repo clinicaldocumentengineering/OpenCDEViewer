@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    File: DocumentsList.xml
+    Created: April 2016
+    Authors: Martí Pàmies / Rafael Rosa
+    Description: List of file names that include related CDAs.
+                 Useful to display relations between documents notification. 
+--> 
+<!--
+ Licensed to Clinical Document Engineering (CDE) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ CDE licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->   
+<opencde:DocumentsList xmlns:opencde="http://clinicaldocumentengineering.com/OpenCDE">
+    <opencde:ClinicalDocument>
+        <opencde:fileName>ContinuityOfCare_NestedSection.xml</opencde:fileName>
+    </opencde:ClinicalDocument>
+    <opencde:ClinicalDocument>
+        <opencde:fileName>ContinuityOfCare_NestedSection_RPLC.xml</opencde:fileName>
+    </opencde:ClinicalDocument>
+    <opencde:ClinicalDocument>
+        <opencde:fileName>DischargeSummary.xml</opencde:fileName>
+    </opencde:ClinicalDocument>
+    <opencde:ClinicalDocument>
+        <opencde:fileName>DischargeSummary_XFRM.xml</opencde:fileName>
+    </opencde:ClinicalDocument>
+    <opencde:ClinicalDocument>
+        <opencde:fileName>IHE_Lab3_Sample2.xml</opencde:fileName>
+    </opencde:ClinicalDocument>
+    <opencde:ClinicalDocument>
+        <opencde:fileName>IHE_Lab3_Sample1_Micro_APND.xml</opencde:fileName>
+    </opencde:ClinicalDocument>
+</opencde:DocumentsList>

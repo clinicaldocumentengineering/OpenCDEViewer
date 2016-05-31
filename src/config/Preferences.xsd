@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    File: Preferences.xsd
+    Created: April 2016
+    Authors: Martí Pàmies / Rafael Rosa
+    Description: OpenCDE Viewer Preferences file XML schema
+--> 
+<!--
+ Licensed to Clinical Document Engineering (CDE) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ CDE licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+  elementFormDefault="qualified" 
+  targetNamespace="http://clinicaldocumentengineering.com/OpenCDE" 
+  xmlns:opencde="http://clinicaldocumentengineering.com/OpenCDE">
+  
+  <!-- Root element -->
+  <xs:element name="Preferences">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="opencde:DocumentsCodesPreferences"/>
+        <xs:element ref="opencde:DICOMViewer"></xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- For a particular type of document preferences -->
+  <xs:element name="DocumentsCodesPreferences">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Initial sections -->
+        <xs:element minOccurs="0" ref="opencde:DocumentCodeInitialSections"/>
+        <!-- Sections relations -->
+        <xs:element minOccurs="0" ref="opencde:SectionsRelations"/>
+        <!-- Auto search keywords -->
+        <xs:element minOccurs="0" ref="opencde:SearchKeyWords"/>
+      </xs:sequence>
+      <!-- To define the type of document -->
+      <xs:attribute name="code" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="codeSystem" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Initial sections to be displayed -->
+  <xs:element name="DocumentCodeInitialSections">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="opencde:Section"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- To define initial sections using code and codeSsytem -->
+  <xs:element name="Section">
+    <xs:complexType>
+      <xs:attribute name="code" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="codeSystem" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- To define sections relations -->
+  <xs:element name="SectionsRelations">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="opencde:SectionRelation"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- A particular section relation -->
+  <xs:element name="SectionRelation">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Source (where the link is added) -->
+        <xs:element ref="opencde:SourceSection"/>
+        <!-- Target ( Where the link will navigate) -->
+        <xs:element ref="opencde:TargetSection"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Source (where the link is added) -->
+  <xs:element name="SourceSection">
+    <xs:complexType>
+      <xs:attribute name="code" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="codeSystem" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Target ( Where the link will navigate) -->
+  <xs:element name="TargetSection">
+    <xs:complexType>
+      <xs:attribute name="code" use="required" type="xs:NMTOKEN"/>
+      <xs:attribute name="codeSystem" use="required" type="xs:NMTOKEN"/>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- To goup all search key words for a type of document -->
+  <xs:element name="SearchKeyWords">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Key word to be searched -->
+        <xs:element maxOccurs="unbounded" name="KeyWord" type="xs:string"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- DICOM Viewer integration preferences -->
+  <xs:element name="DICOMViewer">
+    <xs:complexType>
+      <xs:sequence>
+        <!-- Type of viewer -->
+        <xs:element name="ViewerType" type="opencde:ViewerTypeCT"/>
+        <!-- Viewer specific parameters -->
+        <xs:element name="ViewerParameters" type="opencde:ViewerParametersCT"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  
+  <!-- Enumeration of allowed Viewers -->
+  <xs:simpleType name="ViewerTypeCT">
+    <xs:restriction base="xs:string">
+      <!-- DICOM Web Viewer (https://github.com/ivmartel/dwv) -->
+      <xs:enumeration value="DWV"></xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  
+  <!-- Viewer parameters properties bag -->
+  <xs:complexType name="ViewerParametersCT">
+    <xs:sequence>
+      <xs:element name="Parameter" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Value" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>      
+    </xs:sequence>
+  </xs:complexType>
+  
+</xs:schema>

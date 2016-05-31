@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    File: Preferences.xml
+    Created: April 2016
+    Authors: Martí Pàmies / Rafael Rosa
+    Description: OpenCDE Viewer Preferences file, to configure some features
+--> 
+<!--
+ Licensed to Clinical Document Engineering (CDE) under one or more
+ contributor license agreements.  See the NOTICE file distributed with
+ this work for additional information regarding copyright ownership.
+ CDE licenses this file to You under the Apache License, Version 2.0
+ (the "License"); you may not use this file except in compliance with
+ the License.  You may obtain a copy of the License at
+      http://www.apache.org/licenses/LICENSE-2.0
+ Unless required by applicable law or agreed to in writing, software
+ distributed under the License is distributed on an "AS IS" BASIS,
+ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ See the License for the specific language governing permissions and
+ limitations under the License.
+-->
+<Preferences xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://clinicaldocumentengineering.com/OpenCDE Preferences.xsd"
+    xmlns="http://clinicaldocumentengineering.com/OpenCDE">
+    <!-- Per each type of document preferences -->
+    <!-- LOINC 34133-9: Summary of episode note -->
+    <DocumentsCodesPreferences code="34133-9" codeSystem="2.16.840.1.113883.6.1">
+        <!-- Initial sections to be displayed -->
+        <DocumentCodeInitialSections>
+            <!--Reason for visit-->
+            <Section code="29299-5" codeSystem="2.16.840.1.113883.6.1"/>
+            <!-- Plan of Care -->
+            <Section code="18776-5" codeSystem="2.16.840.1.113883.6.1"/>
+            <!--Instructions-->
+            <Section code="69730-0" codeSystem="2.16.840.1.113883.6.1"/>
+        </DocumentCodeInitialSections>
+        <!-- Related sections -->
+        <SectionsRelations>
+            <SectionRelation>
+                <!-- Medications -->
+                <SourceSection code="10160-0" codeSystem="2.16.840.1.113883.6.1"/>
+                <!--Allergies, adverse reactions, alerts-->
+                <TargetSection code="48765-2" codeSystem="2.16.840.1.113883.6.1"/>
+            </SectionRelation>
+        </SectionsRelations>
+        <!-- Key words to be searched automatically when opening that type of document -->
+        <SearchKeyWords>
+            <KeyWord>Penicillin</KeyWord>
+        </SearchKeyWords>
+    </DocumentsCodesPreferences>
+    <!-- LOINC 52521-2: Plan of Care -->
+    <DocumentsCodesPreferences code="52521-2" codeSystem="2.16.840.1.113883.6.1">
+        <!-- Initial sections to be displayed -->
+        <DocumentCodeInitialSections>
+            <!-- Goals Section -->
+            <Section code="61146-7" codeSystem="2.16.840.1.113883.6.1"/>
+            <!-- Health Status Evaluations/Outcomes Section  -->
+            <Section code="11383-7" codeSystem="2.16.840.1.113883.6.1"/>
+        </DocumentCodeInitialSections>
+    </DocumentsCodesPreferences>
+    <!-- DICOM Viewer Parameters -->
+    <DICOMViewer>
+        <!--Viewer Type -->
+        <ViewerType>DWV</ViewerType>
+        <ViewerParameters>
+            <!-- Viewer Specific parameters -->
+            <Parameter>
+                <Name>URL</Name>
+                <Value>http://ivmartel.github.io/dwv/demo/stable/viewers/mobile/index.html?input=</Value>
+            </Parameter>
+        </ViewerParameters>
+    </DICOMViewer>
+</Preferences>

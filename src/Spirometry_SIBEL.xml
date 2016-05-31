@@ -17,7 +17,7 @@
     <!-- RH-05 Titulo : local , Obligatorio -->
     <title>INFORME DE ESPIROMETRÍA</title>
     <!-- RH-06 Fecha de Generacion del Informe, precision al segundo, con zona horaria, Obligatorio -->
-    <effectiveTime value="22220101000000+0100"/>
+    <effectiveTime value="20160101000000+0100"/>
     <!-- RH-07 Codigo de Confidencialidad, valor fijo N=NORMAL en vocab. HL7, Obligatorio -->
     <confidentialityCode code="N" codeSystem="2.16.840.1.113883.5.25"/>
     <!-- RH-08 Codigo de Lenguaje ISO 639-1 ca-ES o es-ES, Obligatorio -->
@@ -31,31 +31,31 @@
         <patientRole>
             <id extension="ParamPatientIdExt" root="2.16.840.1.113883.19.5"/>
             <addr>
-                <streetAddressLine>ParamPatientStreet</streetAddressLine>
-                <city>ParamPatientCity</city>
-                <state>ParamPatientState</state>
-                <postalCode>ParamPatientIPostalCode</postalCode>
-                <country>ParamPatientCountry</country>
+                <streetAddressLine>Street</streetAddressLine>
+                <city>City</city>
+                <state>State</state>
+                <postalCode>Postal Code</postalCode>
+                <country>Country</country>
             </addr>
             <telecom value="tel:ParamPatientTel" use="HP"/>
             <patient>
                 <name>
-                    <given>ParamPatientGiven</given>
-                    <family>ParamPatientFamily</family>
+                    <given>Given</given>
+                    <family>Family</family>
                 </name>
                 <administrativeGenderCode code="ParamPatientGender" codeSystem="2.16.840.1.113883.5.1"/>
-                <birthTime value="22220101000000+0200"/>
+                <birthTime value="19820101000000+0200"/>
             </patient>
             <providerOrganization>
                 <id root="ParamCustodianId"/>
-                <name>ParamCustodianname</name>
+                <name>Custodian name</name>
                 <telecom value="tel:ParamCustodianTel" use="WP"/>
                 <addr>
-                    <streetAddressLine>ParamCustodianStreet</streetAddressLine>
-                    <city>ParamCustodianCity</city>
-                    <state>ParamCustodianState</state>
-                    <postalCode>ParamCustodianPostalCode</postalCode>
-                    <country>ParamCustodianCountry</country>
+                    <streetAddressLine>Custodian Street</streetAddressLine>
+                    <city>Custodian City</city>
+                    <state>Custodian State</state>
+                    <postalCode>9999</postalCode>
+                    <country>Country</country>
                 </addr>
             </providerOrganization>
         </patientRole>
