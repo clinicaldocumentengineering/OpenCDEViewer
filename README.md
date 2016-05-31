@@ -35,3 +35,4 @@ Provided source code is prepared to be tested locally, without needing a web ser
 
 ### More on OpenCDE platform
 OpenCDE Viewer component, is part of a full solution for sharing clinical documents, from the OpenCDE platform. You can find more information on that, at company web site (http://clinicaldocumentengineering.com/)
+![logo]http://clinicaldocumentengineering.com/assets/logo/logo_CDE_text_big.png
